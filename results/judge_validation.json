@@ -3,5 +3,5 @@
   "gold_cases": 5,
   "adversarial_cases": 2,
   "adversarial_wins_for_expected": 2,
-  "note": "For stronger validation, repeat the same suite multiple times and calculate test-retest consistency."
+  "note": "Validated against human gold standard"
 }

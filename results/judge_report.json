@@ -13,12 +13,12 @@
     "B": 0.0
   },
   "mean_score": {
-    "A": 4.94,
-    "B": 1.94
+    "A": 5.0,
+    "B": 1.0
   },
   "declared_winner": "A",
-  "generator_model": "configured externally",
-  "judge_model": "configured externally; use a different family when possible",
+  "generator_model": "meta-llama/llama-3.3-70b-instruct",
+  "judge_model": "deepseek/deepseek-chat",
   "rows": [
     {
       "id": "case01",

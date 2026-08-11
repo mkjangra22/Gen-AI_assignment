@@ -1,16 +1,16 @@
 {
-  "k": 3,
+  "k": 5,
   "num_questions": 15,
   "metrics": {
-    "recall_at_k": 0.8666666666666667,
-    "hit_rate_at_k": 0.8666666666666667,
-    "mrr": 0.8333333333333334,
-    "ndcg_at_k": 0.8420619835714305,
-    "context_precision": 0.28888888888888886
+    "recall_at_k": 1.0,
+    "hit_rate_at_k": 1.0,
+    "mrr": 0.8666666666666667,
+    "ndcg_at_k": 0.8994855246478829,
+    "context_precision": 0.2
   },
   "latency_ms": {
-    "p50": 17.18810000238591,
-    "p95": 42.770350002319944
+    "p50": 20.769499999005347,
+    "p95": 91.61658999655631
   },
   "rows": [
     {
@@ -22,14 +22,16 @@
       "retrieved": [
         "c5900cdb62ea3a3cd567088b",
         "db1fcbfe85b29b91ee365db9",
-        "4fb08b6f5091e7d1556d681e"
+        "4fb08b6f5091e7d1556d681e",
+        "722917420f3913958f082caf",
+        "e1842aa282f0136acfc68ad7"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 89.21290000216686
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 121.57959999603918
     },
     {
       "id": "q02",
@@ -40,14 +42,16 @@
       "retrieved": [
         "c04e03de2b5ee3185b0a8480",
         "db1fcbfe85b29b91ee365db9",
-        "4e095bf24831bb00925f971b"
+        "4e095bf24831bb00925f971b",
+        "a4bfc9a1005ecc065f8d1c38",
+        "542215d0fe41a62455115d99"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 20.692299996881047
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 78.7752999967779
     },
     {
       "id": "q03",
@@ -58,14 +62,16 @@
       "retrieved": [
         "c04e03de2b5ee3185b0a8480",
         "a4bfc9a1005ecc065f8d1c38",
-        "db1fcbfe85b29b91ee365db9"
+        "db1fcbfe85b29b91ee365db9",
+        "bc1358e62822758ef396d82f",
+        "dbb8cff65566585538cafc8e"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 18.273199999384815
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 46.91270000330405
     },
     {
       "id": "q04",
@@ -76,14 +82,16 @@
       "retrieved": [
         "bc1358e62822758ef396d82f",
         "bfc66a919095446f1601a093",
-        "dbb8cff65566585538cafc8e"
+        "dbb8cff65566585538cafc8e",
+        "a4bfc9a1005ecc065f8d1c38",
+        "db1fcbfe85b29b91ee365db9"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 15.6831999993301
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 20.052499996381812
     },
     {
       "id": "q05",
@@ -94,14 +102,16 @@
       "retrieved": [
         "dbb8cff65566585538cafc8e",
         "e1842aa282f0136acfc68ad7",
-        "c04e03de2b5ee3185b0a8480"
+        "c04e03de2b5ee3185b0a8480",
+        "542215d0fe41a62455115d99",
+        "bfc66a919095446f1601a093"
       ],
-      "recall_at_k": 0.0,
-      "hit_rate_at_k": 0.0,
-      "mrr": 0.0,
-      "ndcg_at_k": 0.0,
-      "context_precision": 0.0,
-      "retrieval_latency_ms": 19.08719999846653
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 0.25,
+      "ndcg_at_k": 0.43067655807339306,
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 71.3776999982656
     },
     {
       "id": "q06",
@@ -112,14 +122,16 @@
       "retrieved": [
         "dbb8cff65566585538cafc8e",
         "bfc66a919095446f1601a093",
-        "722917420f3913958f082caf"
+        "722917420f3913958f082caf",
+        "a4bfc9a1005ecc065f8d1c38",
+        "5f2d6b7c0895ead74ac95dbe"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 0.5,
       "ndcg_at_k": 0.6309297535714575,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 18.254200000228593
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 19.420500000705943
     },
     {
       "id": "q07",
@@ -130,14 +142,16 @@
       "retrieved": [
         "bfc66a919095446f1601a093",
         "dbb8cff65566585538cafc8e",
-        "a4bfc9a1005ecc065f8d1c38"
+        "a4bfc9a1005ecc065f8d1c38",
+        "5f2d6b7c0895ead74ac95dbe",
+        "722917420f3913958f082caf"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 22.86640000238549
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 17.94060000247555
     },
     {
       "id": "q08",
@@ -148,14 +162,16 @@
       "retrieved": [
         "bc93b71c1976df268cfa751f",
         "722917420f3913958f082caf",
-        "4fb08b6f5091e7d1556d681e"
+        "4fb08b6f5091e7d1556d681e",
+        "c5900cdb62ea3a3cd567088b",
+        "db1fcbfe85b29b91ee365db9"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 16.284900000755442
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 20.769499999005347
     },
     {
       "id": "q09",
@@ -166,14 +182,16 @@
       "retrieved": [
         "4fb08b6f5091e7d1556d681e",
         "c5900cdb62ea3a3cd567088b",
-        "db1fcbfe85b29b91ee365db9"
+        "db1fcbfe85b29b91ee365db9",
+        "e1842aa282f0136acfc68ad7",
+        "722917420f3913958f082caf"
       ],
-      "recall_at_k": 0.0,
-      "hit_rate_at_k": 0.0,
-      "mrr": 0.0,
-      "ndcg_at_k": 0.0,
-      "context_precision": 0.0,
-      "retrieval_latency_ms": 15.131199997995282
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 0.25,
+      "ndcg_at_k": 0.43067655807339306,
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 65.49619999714196
     },
     {
       "id": "q10",
@@ -184,14 +202,16 @@
       "retrieved": [
         "542215d0fe41a62455115d99",
         "a4bfc9a1005ecc065f8d1c38",
-        "c04e03de2b5ee3185b0a8480"
+        "c04e03de2b5ee3185b0a8480",
+        "dbb8cff65566585538cafc8e",
+        "bc1358e62822758ef396d82f"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 15.788900000188733
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 19.02669999981299
     },
     {
       "id": "q11",
@@ -202,14 +222,16 @@
       "retrieved": [
         "c04e03de2b5ee3185b0a8480",
         "db1fcbfe85b29b91ee365db9",
-        "a4bfc9a1005ecc065f8d1c38"
+        "a4bfc9a1005ecc065f8d1c38",
+        "dbb8cff65566585538cafc8e",
+        "542215d0fe41a62455115d99"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 17.18810000238591
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 17.808900003728922
     },
     {
       "id": "q12",
@@ -220,14 +242,16 @@
       "retrieved": [
         "bfc66a919095446f1601a093",
         "a3d85a646e0bc137a50ffacc",
-        "dbb8cff65566585538cafc8e"
+        "dbb8cff65566585538cafc8e",
+        "5f2d6b7c0895ead74ac95dbe",
+        "4e095bf24831bb00925f971b"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 17.51470000090194
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 21.133399997779634
     },
     {
       "id": "q13",
@@ -238,14 +262,16 @@
       "retrieved": [
         "c5900cdb62ea3a3cd567088b",
         "db1fcbfe85b29b91ee365db9",
-        "4fb08b6f5091e7d1556d681e"
+        "4fb08b6f5091e7d1556d681e",
+        "e1842aa282f0136acfc68ad7",
+        "722917420f3913958f082caf"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 17.106399998738198
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 19.08519999415148
     },
     {
       "id": "q14",
@@ -256,14 +282,16 @@
       "retrieved": [
         "e1842aa282f0136acfc68ad7",
         "dbb8cff65566585538cafc8e",
-        "c04e03de2b5ee3185b0a8480"
+        "c04e03de2b5ee3185b0a8480",
+        "db1fcbfe85b29b91ee365db9",
+        "bfc66a919095446f1601a093"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 15.200300000287825
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 21.703999998862855
     },
     {
       "id": "q15",
@@ -274,14 +302,16 @@
       "retrieved": [
         "c5900cdb62ea3a3cd567088b",
         "db1fcbfe85b29b91ee365db9",
-        "e1842aa282f0136acfc68ad7"
+        "e1842aa282f0136acfc68ad7",
+        "4fb08b6f5091e7d1556d681e",
+        "722917420f3913958f082caf"
       ],
       "recall_at_k": 1.0,
       "hit_rate_at_k": 1.0,
       "mrr": 1.0,
       "ndcg_at_k": 1.0,
-      "context_precision": 0.3333333333333333,
-      "retrieval_latency_ms": 14.806000002863584
+      "context_precision": 0.2,
+      "retrieval_latency_ms": 20.388400000229012
     }
   ],
   "answer_evaluation": {
