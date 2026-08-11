@@ -1,6 +1,7 @@
 # Applied AI / ML Engineering — Take-Home Assignment
 
 Problem 1: **Cost-Efficient RAG Application**
+
 Problem 2: **LLM-as-Judge Evaluation Pipeline**
 
 > Assignment source: `Gen AI_assignment.pdf`
