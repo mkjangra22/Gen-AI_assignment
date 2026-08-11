@@ -1,0 +1,107 @@
+[
+  {
+    "id": "q01",
+    "question": "Why is an embedded low-cost vector store useful for a lightly queried index?",
+    "relevant_chunk_ids": [
+      "c5900cdb62ea3a3cd567088b"
+    ]
+  },
+  {
+    "id": "q02",
+    "question": "What does idempotent ingestion mean in this implementation?",
+    "relevant_chunk_ids": [
+      "c04e03de2b5ee3185b0a8480"
+    ]
+  },
+  {
+    "id": "q03",
+    "question": "What is the default chunk size?",
+    "relevant_chunk_ids": [
+      "c04e03de2b5ee3185b0a8480"
+    ]
+  },
+  {
+    "id": "q04",
+    "question": "What metadata can be used to filter retrieval?",
+    "relevant_chunk_ids": [
+      "bc1358e62822758ef396d82f"
+    ]
+  },
+  {
+    "id": "q05",
+    "question": "What should the RAG assistant do when relevant context is missing?",
+    "relevant_chunk_ids": [
+      "542215d0fe41a62455115d99"
+    ]
+  },
+  {
+    "id": "q06",
+    "question": "Which retrieval metrics are used to evaluate this system?",
+    "relevant_chunk_ids": [
+      "bfc66a919095446f1601a093"
+    ]
+  },
+  {
+    "id": "q07",
+    "question": "What latency percentiles are recorded?",
+    "relevant_chunk_ids": [
+      "bfc66a919095446f1601a093"
+    ]
+  },
+  {
+    "id": "q08",
+    "question": "Why is the embedding API cost zero by default?",
+    "relevant_chunk_ids": [
+      "bc93b71c1976df268cfa751f"
+    ]
+  },
+  {
+    "id": "q09",
+    "question": "When should the system switch to a managed vector database?",
+    "relevant_chunk_ids": [
+      "e1842aa282f0136acfc68ad7"
+    ]
+  },
+  {
+    "id": "q10",
+    "question": "What does a citation identify in the generated answer?",
+    "relevant_chunk_ids": [
+      "542215d0fe41a62455115d99"
+    ]
+  },
+  {
+    "id": "q11",
+    "question": "Why are deterministic chunk IDs important?",
+    "relevant_chunk_ids": [
+      "c04e03de2b5ee3185b0a8480"
+    ]
+  },
+  {
+    "id": "q12",
+    "question": "What is the purpose of a fixed evaluation set?",
+    "relevant_chunk_ids": [
+      "bfc66a919095446f1601a093"
+    ]
+  },
+  {
+    "id": "q13",
+    "question": "What is the main operational advantage of embedded ChromaDB?",
+    "relevant_chunk_ids": [
+      "c5900cdb62ea3a3cd567088b"
+    ]
+  },
+  {
+    "id": "q14",
+    "question": "What two layers should be separated when diagnosing RAG quality?",
+    "relevant_chunk_ids": [
+      "e1842aa282f0136acfc68ad7"
+    ]
+  },
+  {
+    "id": "q15",
+    "question": "What is one accepted trade-off of a local embedded vector store?",
+    "relevant_chunk_ids": [
+      "c5900cdb62ea3a3cd567088b"
+    ]
+  }
+]

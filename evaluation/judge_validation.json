@@ -1,0 +1,22 @@
+[
+  {
+    "id": "case01",
+    "expected_winner": "A"
+  },
+  {
+    "id": "case02",
+    "expected_winner": "A"
+  },
+  {
+    "id": "case03",
+    "expected_winner": "A"
+  },
+  {
+    "id": "case04",
+    "expected_winner": "A"
+  },
+  {
+    "id": "case05",
+    "expected_winner": "A"
+  }
+]

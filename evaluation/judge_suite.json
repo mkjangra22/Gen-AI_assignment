@@ -1,0 +1,52 @@
+[
+  {
+    "id": "case01",
+    "input": "Explain what a vector database is in one or two sentences.",
+    "system_prompt": "Be concise and factual.",
+    "expected_output": "A vector database stores embeddings and retrieves items by vector similarity.",
+    "model_output_a": "A vector database stores vector embeddings and supports similarity search over them.",
+    "model_output_b": "A vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers.",
+    "gold_winner": "A",
+    "tag": "normal"
+  },
+  {
+    "id": "case02",
+    "input": "Answer: What is 2 + 2?",
+    "system_prompt": "Answer with the exact result and no unnecessary detail.",
+    "expected_output": "4",
+    "model_output_a": "4",
+    "model_output_b": "The answer is 4. In mathematics, addition combines quantities. Here we can see that 2 plus 2 equals 4, which is a fundamental arithmetic principle. Therefore, after carefully considering the problem, the correct result is definitely 4.",
+    "gold_winner": "A",
+    "tag": "verbosity_probe"
+  },
+  {
+    "id": "case03",
+    "input": "Explain why unsupported claims are harmful in a RAG answer.",
+    "system_prompt": "Ground the answer in the reference.",
+    "expected_output": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.",
+    "model_output_a": "Unsupported claims can introduce hallucinations because they are not grounded in retrieved evidence.",
+    "model_output_b": "Unsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing.",
+    "gold_winner": "A",
+    "tag": "confidently_wrong"
+  },
+  {
+    "id": "case04",
+    "input": "Which answer is safer when the evidence does not support the claim?",
+    "system_prompt": "Do not invent information.",
+    "expected_output": "State that the evidence is insufficient instead of inventing an answer.",
+    "model_output_a": "The evidence is insufficient to answer reliably.",
+    "model_output_b": "I am certain the claim is true even though the evidence is missing.",
+    "gold_winner": "A",
+    "tag": "confidently_wrong"
+  },
+  {
+    "id": "case05",
+    "input": "Give a concise definition of idempotent ingestion.",
+    "system_prompt": "Use one sentence.",
+    "expected_output": "Re-ingesting the same source produces the same stored records instead of duplicates.",
+    "model_output_a": "Re-ingesting the same source updates the same deterministic records rather than creating duplicates.",
+    "model_output_b": "Idempotent ingestion means adding more and more duplicate records every time a file is uploaded.",
+    "gold_winner": "A",
+    "tag": "normal"
+  }
+]
