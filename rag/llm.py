@@ -24,17 +24,22 @@ class LLMClient:
             payload["response_format"] = {"type": "json_object"}
 
         started = time.perf_counter()
-        response = requests.post(
-            f"{self.base_url}/chat/completions",
-            headers={
-                "Authorization": f"Bearer {self.api_key}",
-                "Content-Type": "application/json",
-            },
-            json=payload,
-            timeout=90,
-        )
+        for attempt in range(4):
+            response = requests.post(
+                f"{self.base_url}/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {self.api_key}",
+                    "Content-Type": "application/json",
+                },
+                json=payload,
+                timeout=90,
+            )
+            if response.status_code == 429 and attempt < 3:
+                time.sleep(12 * (attempt + 1))
+                continue
+            response.raise_for_status()
+            break
         latency_ms = (time.perf_counter() - started) * 1000
-        response.raise_for_status()
         data = response.json()
 
         choice = data["choices"][0]["message"]["content"]

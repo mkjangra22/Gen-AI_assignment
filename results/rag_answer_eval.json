@@ -1,0 +1,286 @@
+{
+  "num_questions": 15,
+  "successful_questions": 15,
+  "failed_questions": 0,
+  "mean_faithfulness": 4.733333333333333,
+  "mean_answer_relevance": 4.666666666666667,
+  "latency_ms": {
+    "retrieval_p50": 32.86379999917699,
+    "retrieval_p95": 122.21073000109766,
+    "total_p50": 2145.7531999985804,
+    "total_p95": 10656.915679996748
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "question": "Why is an embedded low-cost vector store useful for a lightly queried index?",
+      "answer": "An embedded low-cost vector store is useful for a lightly queried index because it allows the application to avoid paying for dedicated always-on vector database infrastructure [data/docs/demo_rag_01.md:0] [data/docs/rag_design.md:0]. This results in simple deployment, as the index can live with the application rather than requiring a separate database service [data/docs/demo_rag_01.md:0] [data/docs/rag_design.md:0].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer's claims are fully supported by the supplied context. Both sources [data/docs/demo_rag_01.md:0] and [data/docs/rag_design.md:0] explicitly state that an embedded low-cost vector store is useful for a lightly queried index because it avoids the cost of dedicated infrastructure and simplifies deployment."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by explaining why an embedded low-cost vector store is useful for a lightly queried index, focusing on cost savings and simplified deployment."
+      },
+      "retrieval_latency_ms": 244.25789999804692,
+      "generation_latency_ms": 3080.809400002181,
+      "total_tokens": 806,
+      "judge_tokens": 986,
+      "status": "success"
+    },
+    {
+      "id": "q02",
+      "question": "What does idempotent ingestion mean in this implementation?",
+      "answer": "Idempotent ingestion means re-ingesting an unchanged source produces the same deterministic records instead of duplicate vectors [data/docs/demo_rag_02.md:0]. This is achieved through the use of deterministic chunk IDs derived from document identity, chunk position, and chunk text, and the vector store's upsert semantics [data/docs/rag_design.md:0], [data/docs/demo_rag_02.md:0].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer accurately reflects the information provided in the context, specifically from [data/docs/demo_rag_02.md:0] and [data/docs/rag_design.md:0]. It correctly explains that idempotent ingestion means re-ingesting an unchanged source produces the same deterministic records and describes how deterministic chunk IDs and upsert semantics are used to achieve this."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by explaining what idempotent ingestion means in the context of the implementation, providing a clear and concise explanation that is fully supported by the retrieved context."
+      },
+      "retrieval_latency_ms": 39.460200001485646,
+      "generation_latency_ms": 2599.501999997301,
+      "total_tokens": 435,
+      "judge_tokens": 907,
+      "status": "success"
+    },
+    {
+      "id": "q03",
+      "question": "What is the default chunk size?",
+      "answer": "The default chunk size is 800 characters with 120 characters of overlap [data/docs/demo_rag_02.md:0], [data/docs/rag_design.md:1].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer's claim that the default chunk size is 800 characters with 120 characters of overlap is directly supported by the provided context in [data/docs/demo_rag_02.md:0] and [data/docs/rag_design.md:1]."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by providing the default chunk size and the overlap, which is exactly what was asked."
+      },
+      "retrieval_latency_ms": 35.647600001539104,
+      "generation_latency_ms": 1896.5242999984184,
+      "total_tokens": 389,
+      "judge_tokens": 931,
+      "status": "success"
+    },
+    {
+      "id": "q04",
+      "question": "What metadata can be used to filter retrieval?",
+      "answer": "The metadata that can be used to filter retrieval includes source [source: data/docs/demo_rag_03.md:0] and other metadata such as document_id, chunk_index, and file_type [source: data/docs/rag_design.md:1].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer's claims about the metadata that can be used to filter retrieval are fully supported by the provided context, specifically from 'data/docs/demo_rag_03.md:0' and 'data/docs/rag_design.md:1'."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by listing the specific metadata fields that can be used to filter retrieval, which are relevant and accurate based on the context provided."
+      },
+      "retrieval_latency_ms": 24.44860000105109,
+      "generation_latency_ms": 702.4493999997503,
+      "total_tokens": 633,
+      "judge_tokens": 926,
+      "status": "success"
+    },
+    {
+      "id": "q05",
+      "question": "What should the RAG assistant do when relevant context is missing?",
+      "answer": "When relevant context is missing, the RAG assistant should not invent facts, and instead, say that the available documents do not contain enough information [data/docs/demo_rag_07.md:0], as a strong generator cannot recover information that retrieval failed to fetch [data/docs/evaluation.md:0].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer's claims are directly supported by the retrieved context, specifically from [data/docs/demo_rag_04.md:0] and [data/docs/evaluation.md:0]. The answer accurately reflects the guidelines for handling missing context."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by providing a clear and specific action for the RAG assistant to take when relevant context is missing."
+      },
+      "retrieval_latency_ms": 32.86379999917699,
+      "generation_latency_ms": 12615.227499998582,
+      "total_tokens": 431,
+      "judge_tokens": 819,
+      "status": "success"
+    },
+    {
+      "id": "q06",
+      "question": "Which retrieval metrics are used to evaluate this system?",
+      "answer": "The retrieval metrics used to evaluate this system are Recall@k, Hit Rate@k, MRR, nDCG@k, and context precision [source: data/docs/evaluation.md:0] [source: data/docs/demo_rag_05.md:0] [source: data/docs/rag_design.md:2].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer's claims are fully supported by the supplied context. The retrieval metrics mentioned (Recall@k, Hit Rate@k, MRR, nDCG@k, and context precision) are explicitly listed in the retrieved documents."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by listing the retrieval metrics used to evaluate the system. No additional or irrelevant information is provided."
+      },
+      "retrieval_latency_ms": 35.80409999995027,
+      "generation_latency_ms": 2143.643700001121,
+      "total_tokens": 805,
+      "judge_tokens": 964,
+      "status": "success"
+    },
+    {
+      "id": "q07",
+      "question": "What latency percentiles are recorded?",
+      "answer": "I don't have enough relevant context in the indexed documents to answer this question reliably.",
+      "faithfulness": {
+        "score": 3,
+        "rationale": "The answer states that there is not enough relevant context to answer the question reliably. This is a fair assessment, as the provided context does not explicitly list all the latency percentiles recorded. However, the context does mention p50 and p95 latency, which are relevant to the question."
+      },
+      "answer_relevance": {
+        "score": 3,
+        "rationale": "The answer acknowledges the lack of sufficient context to provide a direct answer. While it does not directly answer the question, it is an appropriate response given the limited information available."
+      },
+      "retrieval_latency_ms": 27.969300004770048,
+      "generation_latency_ms": 0,
+      "total_tokens": 0,
+      "judge_tokens": 930,
+      "status": "success"
+    },
+    {
+      "id": "q08",
+      "question": "Why is the embedding API cost zero by default?",
+      "answer": "The embedding API cost is zero by default because the default embedding model runs locally [source:demo_rag_06.md:0] [source:rag_design.md:2].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer correctly states that the embedding API cost is zero by default because the default embedding model runs locally, which is directly supported by the provided context from 'demo_rag_06.md' and 'rag_design.md'."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by explaining why the embedding API cost is zero by default, providing a clear and concise explanation."
+      },
+      "retrieval_latency_ms": 38.06130000157282,
+      "generation_latency_ms": 4731.1334000041825,
+      "total_tokens": 536,
+      "judge_tokens": 845,
+      "status": "success"
+    },
+    {
+      "id": "q09",
+      "question": "When should the system switch to a managed vector database?",
+      "answer": "The system should switch to a managed vector database when availability, concurrency, multi-region operation, automated backups, or operational burden outweigh the cost savings of the embedded design [data/docs/rag_design.md:3] [data/docs/demo_rag_07.md:0].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer's claims are directly supported by the context, specifically from [data/docs/rag_design.md:3] and [data/docs/demo_rag_07.md:0]. The context clearly states the conditions under which a managed vector database becomes more attractive."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by providing specific conditions under which the system should switch to a managed vector database, which aligns with the information provided in the context."
+      },
+      "retrieval_latency_ms": 26.869599998462945,
+      "generation_latency_ms": 2118.8836000001174,
+      "total_tokens": 763,
+      "judge_tokens": 921,
+      "status": "success"
+    },
+    {
+      "id": "q10",
+      "question": "What does a citation identify in the generated answer?",
+      "answer": "A citation identifies the source and chunk used to support the answer [data/docs/demo_rag_04.md:0]. It includes the exact source and chunk index [data/docs/rag_design.md:1], providing information about the document_id, source, chunk_index, and file_type.",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer accurately reflects the information provided in the context, specifically from [data/docs/demo_rag_04.md:0] and [data/docs/rag_design.md:1]. It correctly states that a citation identifies the source and chunk used to support the answer and includes the metadata fields such as document_id, source, chunk_index, and file_type."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by explaining what a citation identifies in the generated answer, using the information provided in the context."
+      },
+      "retrieval_latency_ms": 33.509199995023664,
+      "generation_latency_ms": 1838.606000004802,
+      "total_tokens": 410,
+      "judge_tokens": 891,
+      "status": "success"
+    },
+    {
+      "id": "q11",
+      "question": "Why are deterministic chunk IDs important?",
+      "answer": "Deterministic chunk IDs are important because they allow for idempotent ingestion, meaning re-ingesting an unchanged document updates the existing record instead of creating another vector [data/docs/demo_rag_02.md:0], [data/docs/rag_design.md:0]. This is achieved by deriving chunk IDs from document identity, chunk position, and chunk text [data/docs/rag_design.md:0], [data/docs/rag_design.md:1].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer's claims are fully supported by the supplied context. The context explicitly states that deterministic chunk IDs allow for idempotent ingestion, which means re-ingesting an unchanged document updates the existing record instead of creating another vector. It also explains that chunk IDs are derived from document identity, chunk position, and chunk text."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by explaining why deterministic chunk IDs are important, specifically focusing on their role in enabling idempotent ingestion and how they are derived."
+      },
+      "retrieval_latency_ms": 31.37859999696957,
+      "generation_latency_ms": 9772.176099999342,
+      "total_tokens": 757,
+      "judge_tokens": 1016,
+      "status": "success"
+    },
+    {
+      "id": "q12",
+      "question": "What is the purpose of a fixed evaluation set?",
+      "answer": "The purpose of a fixed evaluation set is to make comparisons repeatable across changes [data/docs/demo_rag_05.md:0] and to ensure that evaluations are consistent [data/docs/evaluation.md:0].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer's claims are directly supported by the supplied context. The context from 'demo_rag_05.md' and 'evaluation.md' both mention that a fixed evaluation set is used to make comparisons repeatable and ensure consistency."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by explaining the purpose of a fixed evaluation set, which is to make comparisons repeatable and ensure consistency."
+      },
+      "retrieval_latency_ms": 69.90480000240495,
+      "generation_latency_ms": 1804.6332000012626,
+      "total_tokens": 618,
+      "judge_tokens": 807,
+      "status": "success"
+    },
+    {
+      "id": "q13",
+      "question": "What is the main operational advantage of embedded ChromaDB?",
+      "answer": "The main operational advantage of an embedded ChromaDB, or more generally an embedded low-cost vector store, is simple deployment because the index can live with the application rather than requiring a separate database service [data/docs/demo_rag_01.md:0] [data/docs/rag_design.md:0].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer's claim that the main operational advantage of an embedded ChromaDB is simple deployment because the index can live with the application rather than requiring a separate database service is directly supported by the provided context."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by identifying the main operational advantage of an embedded ChromaDB, which is simple deployment due to the index living with the application."
+      },
+      "retrieval_latency_ms": 30.511199998727534,
+      "generation_latency_ms": 1845.3219000002719,
+      "total_tokens": 432,
+      "judge_tokens": 916,
+      "status": "success"
+    },
+    {
+      "id": "q14",
+      "question": "What two layers should be separated when diagnosing RAG quality?",
+      "answer": "I don't have enough relevant context in the indexed documents to answer this question reliably.",
+      "faithfulness": {
+        "score": 3,
+        "rationale": "The answer states that there is not enough relevant context to answer the question reliably. While this is a cautious and honest response, it does not directly address the question based on the available context, which does mention the two layers of RAG quality: retrieval and generation."
+      },
+      "answer_relevance": {
+        "score": 2,
+        "rationale": "The answer does not directly answer the question about the two layers that should be separated when diagnosing RAG quality. However, it is a reasonable response given the lack of direct context, even though the context does provide the necessary information."
+      },
+      "retrieval_latency_ms": 21.967599997879006,
+      "generation_latency_ms": 0,
+      "total_tokens": 0,
+      "judge_tokens": 871,
+      "status": "success"
+    },
+    {
+      "id": "q15",
+      "question": "What is one accepted trade-off of a local embedded vector store?",
+      "answer": "One accepted trade-off of a local embedded vector store is that a single embedded process is not the best architecture for high-QPS, multi-region, or high-availability requirements [data/docs/demo_rag_01.md:0] [data/docs/rag_design.md:0].",
+      "faithfulness": {
+        "score": 5,
+        "rationale": "The answer's claim that a single embedded process is not the best architecture for high-QPS, multi-region, or high-availability requirements is directly supported by the provided context."
+      },
+      "answer_relevance": {
+        "score": 5,
+        "rationale": "The answer directly addresses the question by identifying one accepted trade-off of a local embedded vector store."
+      },
+      "retrieval_latency_ms": 31.465700005355757,
+      "generation_latency_ms": 4398.977700002433,
+      "total_tokens": 786,
+      "judge_tokens": 902,
+      "status": "success"
+    }
+  ],
+  "judge_model": "qwen/qwen-2.5-72b-instruct"
+}

@@ -37,3 +37,27 @@
                          │ FastAPI /query       │
                          │ latency/token logs   │
                          └──────────────────────┘
+
+
+
+                    GEN AI ASSIGNMENT
+                           │
+              ┌────────────┴────────────┐
+              │                         │
+         PROBLEM 1                 PROBLEM 2
+              │                         │
+        RAG Evaluation          Judge Evaluation
+              │                         │
+       ┌──────┴──────┐             A vs B
+       │             │             B vs A
+   Retrieval      Generation          │
+       │             │                ↓
+   ChromaDB       Llama          Judge Model
+       │             │                │
+       └──────┬──────┘                ↓
+              ↓                 Bias Analysis
+        DeepSeek Judge
+               │
+       Faithfulness
+       Relevance
+```

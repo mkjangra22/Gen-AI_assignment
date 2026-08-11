@@ -1,0 +1,4 @@
+vectors,dimensions,metadata_kb_per_vector,local_embedded_assumption_usd_month,managed_pinecone_builder_floor_usd_month,note
+100000,384,1.0,32.3,44.3,"Local figure assumes fixed small VM/storage budget; managed figure is a pricing-floor comparison, not a quote. Actual managed usage depends on reads/writes/storage."
+1000000,384,1.0,32.3,44.3,"Local figure assumes fixed small VM/storage budget; managed figure is a pricing-floor comparison, not a quote. Actual managed usage depends on reads/writes/storage."
+10000000,384,1.0,32.3,44.3,"Local figure assumes fixed small VM/storage budget; managed figure is a pricing-floor comparison, not a quote. Actual managed usage depends on reads/writes/storage."

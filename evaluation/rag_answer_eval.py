@@ -1,6 +1,7 @@
 import argparse
 import json
 import statistics
+import time
 from pathlib import Path
 
 from rag.pipeline import RAGPipeline
@@ -75,43 +76,58 @@ def main():
     )
 
     rows = []
-    for q in questions:
-        result = pipeline.answer(q["question"], k=args.k)
-        data, raw = evaluate_answer(
-            judge, q["question"], result["answer"], result["contexts"]
-        )
-        rows.append({
-            "id": q["id"],
-            "question": q["question"],
-            "answer": result["answer"],
-            "faithfulness": data["faithfulness"],
-            "answer_relevance": data["answer_relevance"],
-            "retrieval_latency_ms": result["retrieval_latency_ms"],
-            "generation_latency_ms": result["generation_latency_ms"],
-            "total_tokens": result["total_tokens"],
-            "judge_tokens": raw["total_tokens"],
-        })
+    for i, q in enumerate(questions, 1):
+        try:
+            result = pipeline.answer(q["question"], k=args.k)
+            data, raw = evaluate_answer(
+                judge, q["question"], result["answer"], result["contexts"]
+            )
+            rows.append({
+                "id": q["id"],
+                "question": q["question"],
+                "answer": result["answer"],
+                "faithfulness": data["faithfulness"],
+                "answer_relevance": data["answer_relevance"],
+                "retrieval_latency_ms": result["retrieval_latency_ms"],
+                "generation_latency_ms": result["generation_latency_ms"],
+                "total_tokens": result["total_tokens"],
+                "judge_tokens": raw["total_tokens"],
+                "status": "success",
+            })
+            print(f"[{i}/{len(questions)}] Evaluated {q['id']} - Faithfulness: {data['faithfulness']['score']}, Relevance: {data['answer_relevance']['score']}", flush=True)
+        except Exception as exc:
+            rows.append({
+                "id": q["id"],
+                "question": q["question"],
+                "error": str(exc),
+                "status": "failed",
+            })
+            print(f"[{i}/{len(questions)}] Failed {q['id']} - Error: {exc}", flush=True)
+        time.sleep(2)
 
+    valid_rows = [r for r in rows if r.get("status") == "success"]
     report = {
         "num_questions": len(rows),
+        "successful_questions": len(valid_rows),
+        "failed_questions": len(rows) - len(valid_rows),
         "mean_faithfulness": statistics.mean(
-            r["faithfulness"]["score"] for r in rows
-        ),
+            r["faithfulness"]["score"] for r in valid_rows
+        ) if valid_rows else None,
         "mean_answer_relevance": statistics.mean(
-            r["answer_relevance"]["score"] for r in rows
-        ),
+            r["answer_relevance"]["score"] for r in valid_rows
+        ) if valid_rows else None,
         "latency_ms": {
             "retrieval_p50": percentile(
-                [r["retrieval_latency_ms"] for r in rows], 50
+                [r["retrieval_latency_ms"] for r in valid_rows], 50
             ),
             "retrieval_p95": percentile(
-                [r["retrieval_latency_ms"] for r in rows], 95
+                [r["retrieval_latency_ms"] for r in valid_rows], 95
             ),
             "total_p50": percentile(
-                [r["retrieval_latency_ms"] + r["generation_latency_ms"] for r in rows], 50
+                [r["retrieval_latency_ms"] + r["generation_latency_ms"] for r in valid_rows], 50
             ),
             "total_p95": percentile(
-                [r["retrieval_latency_ms"] + r["generation_latency_ms"] for r in rows], 95
+                [r["retrieval_latency_ms"] + r["generation_latency_ms"] for r in valid_rows], 95
             ),
         },
         "rows": rows,

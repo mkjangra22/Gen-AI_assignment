@@ -1,0 +1,290 @@
+{
+  "k": 3,
+  "num_questions": 15,
+  "metrics": {
+    "recall_at_k": 0.8666666666666667,
+    "hit_rate_at_k": 0.8666666666666667,
+    "mrr": 0.8333333333333334,
+    "ndcg_at_k": 0.8420619835714305,
+    "context_precision": 0.28888888888888886
+  },
+  "latency_ms": {
+    "p50": 17.18810000238591,
+    "p95": 42.770350002319944
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "question": "Why is an embedded low-cost vector store useful for a lightly queried index?",
+      "relevant": [
+        "c5900cdb62ea3a3cd567088b"
+      ],
+      "retrieved": [
+        "c5900cdb62ea3a3cd567088b",
+        "db1fcbfe85b29b91ee365db9",
+        "4fb08b6f5091e7d1556d681e"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 89.21290000216686
+    },
+    {
+      "id": "q02",
+      "question": "What does idempotent ingestion mean in this implementation?",
+      "relevant": [
+        "c04e03de2b5ee3185b0a8480"
+      ],
+      "retrieved": [
+        "c04e03de2b5ee3185b0a8480",
+        "db1fcbfe85b29b91ee365db9",
+        "4e095bf24831bb00925f971b"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 20.692299996881047
+    },
+    {
+      "id": "q03",
+      "question": "What is the default chunk size?",
+      "relevant": [
+        "c04e03de2b5ee3185b0a8480"
+      ],
+      "retrieved": [
+        "c04e03de2b5ee3185b0a8480",
+        "a4bfc9a1005ecc065f8d1c38",
+        "db1fcbfe85b29b91ee365db9"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 18.273199999384815
+    },
+    {
+      "id": "q04",
+      "question": "What metadata can be used to filter retrieval?",
+      "relevant": [
+        "bc1358e62822758ef396d82f"
+      ],
+      "retrieved": [
+        "bc1358e62822758ef396d82f",
+        "bfc66a919095446f1601a093",
+        "dbb8cff65566585538cafc8e"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 15.6831999993301
+    },
+    {
+      "id": "q05",
+      "question": "What should the RAG assistant do when relevant context is missing?",
+      "relevant": [
+        "542215d0fe41a62455115d99"
+      ],
+      "retrieved": [
+        "dbb8cff65566585538cafc8e",
+        "e1842aa282f0136acfc68ad7",
+        "c04e03de2b5ee3185b0a8480"
+      ],
+      "recall_at_k": 0.0,
+      "hit_rate_at_k": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_k": 0.0,
+      "context_precision": 0.0,
+      "retrieval_latency_ms": 19.08719999846653
+    },
+    {
+      "id": "q06",
+      "question": "Which retrieval metrics are used to evaluate this system?",
+      "relevant": [
+        "bfc66a919095446f1601a093"
+      ],
+      "retrieved": [
+        "dbb8cff65566585538cafc8e",
+        "bfc66a919095446f1601a093",
+        "722917420f3913958f082caf"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 0.5,
+      "ndcg_at_k": 0.6309297535714575,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 18.254200000228593
+    },
+    {
+      "id": "q07",
+      "question": "What latency percentiles are recorded?",
+      "relevant": [
+        "bfc66a919095446f1601a093"
+      ],
+      "retrieved": [
+        "bfc66a919095446f1601a093",
+        "dbb8cff65566585538cafc8e",
+        "a4bfc9a1005ecc065f8d1c38"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 22.86640000238549
+    },
+    {
+      "id": "q08",
+      "question": "Why is the embedding API cost zero by default?",
+      "relevant": [
+        "bc93b71c1976df268cfa751f"
+      ],
+      "retrieved": [
+        "bc93b71c1976df268cfa751f",
+        "722917420f3913958f082caf",
+        "4fb08b6f5091e7d1556d681e"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 16.284900000755442
+    },
+    {
+      "id": "q09",
+      "question": "When should the system switch to a managed vector database?",
+      "relevant": [
+        "e1842aa282f0136acfc68ad7"
+      ],
+      "retrieved": [
+        "4fb08b6f5091e7d1556d681e",
+        "c5900cdb62ea3a3cd567088b",
+        "db1fcbfe85b29b91ee365db9"
+      ],
+      "recall_at_k": 0.0,
+      "hit_rate_at_k": 0.0,
+      "mrr": 0.0,
+      "ndcg_at_k": 0.0,
+      "context_precision": 0.0,
+      "retrieval_latency_ms": 15.131199997995282
+    },
+    {
+      "id": "q10",
+      "question": "What does a citation identify in the generated answer?",
+      "relevant": [
+        "542215d0fe41a62455115d99"
+      ],
+      "retrieved": [
+        "542215d0fe41a62455115d99",
+        "a4bfc9a1005ecc065f8d1c38",
+        "c04e03de2b5ee3185b0a8480"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 15.788900000188733
+    },
+    {
+      "id": "q11",
+      "question": "Why are deterministic chunk IDs important?",
+      "relevant": [
+        "c04e03de2b5ee3185b0a8480"
+      ],
+      "retrieved": [
+        "c04e03de2b5ee3185b0a8480",
+        "db1fcbfe85b29b91ee365db9",
+        "a4bfc9a1005ecc065f8d1c38"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 17.18810000238591
+    },
+    {
+      "id": "q12",
+      "question": "What is the purpose of a fixed evaluation set?",
+      "relevant": [
+        "bfc66a919095446f1601a093"
+      ],
+      "retrieved": [
+        "bfc66a919095446f1601a093",
+        "a3d85a646e0bc137a50ffacc",
+        "dbb8cff65566585538cafc8e"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 17.51470000090194
+    },
+    {
+      "id": "q13",
+      "question": "What is the main operational advantage of embedded ChromaDB?",
+      "relevant": [
+        "c5900cdb62ea3a3cd567088b"
+      ],
+      "retrieved": [
+        "c5900cdb62ea3a3cd567088b",
+        "db1fcbfe85b29b91ee365db9",
+        "4fb08b6f5091e7d1556d681e"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 17.106399998738198
+    },
+    {
+      "id": "q14",
+      "question": "What two layers should be separated when diagnosing RAG quality?",
+      "relevant": [
+        "e1842aa282f0136acfc68ad7"
+      ],
+      "retrieved": [
+        "e1842aa282f0136acfc68ad7",
+        "dbb8cff65566585538cafc8e",
+        "c04e03de2b5ee3185b0a8480"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 15.200300000287825
+    },
+    {
+      "id": "q15",
+      "question": "What is one accepted trade-off of a local embedded vector store?",
+      "relevant": [
+        "c5900cdb62ea3a3cd567088b"
+      ],
+      "retrieved": [
+        "c5900cdb62ea3a3cd567088b",
+        "db1fcbfe85b29b91ee365db9",
+        "e1842aa282f0136acfc68ad7"
+      ],
+      "recall_at_k": 1.0,
+      "hit_rate_at_k": 1.0,
+      "mrr": 1.0,
+      "ndcg_at_k": 1.0,
+      "context_precision": 0.3333333333333333,
+      "retrieval_latency_ms": 14.806000002863584
+    }
+  ],
+  "answer_evaluation": {
+    "status": "run separately with judge when JUDGE_API_KEY/JUDGE_MODEL are configured"
+  }
+}

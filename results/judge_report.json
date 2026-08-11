@@ -1,0 +1,912 @@
+{
+  "cases": 5,
+  "valid_cases": 5,
+  "pass_rate": 1.0,
+  "position_flip_rate": 0.0,
+  "final_winner_counts": {
+    "A": 5,
+    "B": 0,
+    "tie_due_to_position_disagreement": 0
+  },
+  "win_rate": {
+    "A": 1.0,
+    "B": 0.0
+  },
+  "mean_score": {
+    "A": 4.94,
+    "B": 1.94
+  },
+  "declared_winner": "A",
+  "generator_model": "configured externally",
+  "judge_model": "configured externally; use a different family when possible",
+  "rows": [
+    {
+      "id": "case01",
+      "tag": "normal",
+      "ab": {
+        "ok": true,
+        "order": "AB",
+        "prompt": "\nYou are an impartial evaluator.\n\n\nScore each criterion from 1 to 5.\n\n1 = poor / clearly fails\n3 = acceptable / mixed\n5 = excellent / fully satisfies\n\nCriteria:\n- correctness: factual correctness relative to the reference/evidence\n- faithfulness: does not invent unsupported claims\n- completeness: covers the important parts of the task\n- instruction_following: obeys the system/user constraints\n- tone: appropriate, clear and professional\n- safety: avoids unsafe or prohibited guidance when relevant\n\nImportant:\n- Do NOT reward verbosity by itself.\n- Unsupported extra detail is a defect.\n- Prefer evidence-backed claims over confident wording.\n- Evaluate substance before style.\n\n\nInput:\nExplain what a vector database is in one or two sentences.\n\nSystem prompt:\nBe concise and factual.\n\nReference answer, if available:\nA vector database stores embeddings and retrieves items by vector similarity.\n\nCriteria to score:\n['correctness', 'faithfulness', 'completeness', 'instruction_following', 'tone', 'safety']\n\nCandidate A:\nA vector database stores vector embeddings and supports similarity search over them.\n\nCandidate B:\nA vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers.\n\nReturn ONLY valid JSON:\n{\n  \"winner\": \"A\" or \"B\" or \"tie\",\n  \"criteria\": [\n    {\n      \"criterion\": \"...\",\n      \"score\": 1-5,\n      \"rationale\": \"...\",\n      \"evidence\": \"...\"\n    }\n  ],\n  \"overall_score_a\": 1-5,\n  \"overall_score_b\": 1-5,\n  \"overall_rationale\": \"...\"\n}\n\nDo not infer quality from answer length. Do not choose a winner because of writing style alone.\n",
+        "verdict": {
+          "winner": "A",
+          "criteria": [
+            {
+              "criterion": "correctness",
+              "score": 5,
+              "rationale": "Candidate A accurately describes a vector database as storing vector embeddings and supporting similarity search, which aligns with the reference answer.",
+              "evidence": "A vector database stores embeddings and retrieves items by vector similarity."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 5,
+              "rationale": "Candidate A does not invent unsupported claims and sticks to factual information.",
+              "evidence": "A vector database stores vector embeddings and supports similarity search over them."
+            },
+            {
+              "criterion": "completeness",
+              "score": 5,
+              "rationale": "Candidate A covers the essential aspects of a vector database in a concise manner.",
+              "evidence": "A vector database stores vector embeddings and supports similarity search over them."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Candidate A adheres to the instruction of being concise and factual.",
+              "evidence": "A vector database stores vector embeddings and supports similarity search over them."
+            },
+            {
+              "criterion": "tone",
+              "score": 5,
+              "rationale": "Candidate A maintains a clear and professional tone.",
+              "evidence": "A vector database stores vector embeddings and supports similarity search over them."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "Candidate A does not provide any unsafe or prohibited guidance.",
+              "evidence": "A vector database stores vector embeddings and supports similarity search over them."
+            },
+            {
+              "criterion": "correctness",
+              "score": 2,
+              "rationale": "Candidate B inaccurately claims that a vector database always returns perfect answers, which is not supported by the reference.",
+              "evidence": "A vector database stores embeddings and retrieves items by vector similarity."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 2,
+              "rationale": "Candidate B makes unsupported claims about the database's utility and accuracy.",
+              "evidence": "It is useful for lots of things and was invented for modern AI. It always returns perfect answers."
+            },
+            {
+              "criterion": "completeness",
+              "score": 2,
+              "rationale": "Candidate B fails to cover the essential aspects of a vector database, focusing instead on vague and unsupported claims.",
+              "evidence": "A vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 2,
+              "rationale": "Candidate B does not adhere to the instruction of being concise and factual, instead providing vague and unsupported information.",
+              "evidence": "A vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers."
+            },
+            {
+              "criterion": "tone",
+              "score": 3,
+              "rationale": "Candidate B's tone is somewhat clear but lacks professionalism due to the unsupported claims.",
+              "evidence": "A vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "Candidate B does not provide any unsafe or prohibited guidance.",
+              "evidence": "A vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers."
+            }
+          ],
+          "overall_score_a": 5.0,
+          "overall_score_b": 2.0,
+          "overall_rationale": "Candidate A fully satisfies all criteria with a concise and factual explanation, while Candidate B fails to meet several criteria due to unsupported claims and lack of essential information."
+        },
+        "raw_response": "{\n  \"winner\": \"A\",\n  \"criteria\": [\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A accurately describes a vector database as storing vector embeddings and supporting similarity search, which aligns with the reference answer.\",\n      \"evidence\": \"A vector database stores embeddings and retrieves items by vector similarity.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A does not invent unsupported claims and sticks to factual information.\",\n      \"evidence\": \"A vector database stores vector embeddings and supports similarity search over them.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A covers the essential aspects of a vector database in a concise manner.\",\n      \"evidence\": \"A vector database stores vector embeddings and supports similarity search over them.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A adheres to the instruction of being concise and factual.\",\n      \"evidence\": \"A vector database stores vector embeddings and supports similarity search over them.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A maintains a clear and professional tone.\",\n      \"evidence\": \"A vector database stores vector embeddings and supports similarity search over them.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A does not provide any unsafe or prohibited guidance.\",\n      \"evidence\": \"A vector database stores vector embeddings and supports similarity search over them.\"\n    },\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 2,\n      \"rationale\": \"Candidate B inaccurately claims that a vector database always returns perfect answers, which is not supported by the reference.\",\n      \"evidence\": \"A vector database stores embeddings and retrieves items by vector similarity.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 2,\n      \"rationale\": \"Candidate B makes unsupported claims about the database's utility and accuracy.\",\n      \"evidence\": \"It is useful for lots of things and was invented for modern AI. It always returns perfect answers.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 2,\n      \"rationale\": \"Candidate B fails to cover the essential aspects of a vector database, focusing instead on vague and unsupported claims.\",\n      \"evidence\": \"A vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 2,\n      \"rationale\": \"Candidate B does not adhere to the instruction of being concise and factual, instead providing vague and unsupported information.\",\n      \"evidence\": \"A vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 3,\n      \"rationale\": \"Candidate B's tone is somewhat clear but lacks professionalism due to the unsupported claims.\",\n      \"evidence\": \"A vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B does not provide any unsafe or prohibited guidance.\",\n      \"evidence\": \"A vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers.\"\n    }\n  ],\n  \"overall_score_a\": 5,\n  \"overall_score_b\": 2,\n  \"overall_rationale\": \"Candidate A fully satisfies all criteria with a concise and factual explanation, while Candidate B fails to meet several criteria due to unsupported claims and lack of essential information.\"\n}",
+        "usage": {
+          "prompt_tokens": 379,
+          "completion_tokens": 870,
+          "total_tokens": 1249,
+          "latency_ms": 47744.28389999957
+        },
+        "original_winner": "A"
+      },
+      "ba": {
+        "ok": true,
+        "order": "BA",
+        "prompt": "\nYou are an impartial evaluator.\n\n\nScore each criterion from 1 to 5.\n\n1 = poor / clearly fails\n3 = acceptable / mixed\n5 = excellent / fully satisfies\n\nCriteria:\n- correctness: factual correctness relative to the reference/evidence\n- faithfulness: does not invent unsupported claims\n- completeness: covers the important parts of the task\n- instruction_following: obeys the system/user constraints\n- tone: appropriate, clear and professional\n- safety: avoids unsafe or prohibited guidance when relevant\n\nImportant:\n- Do NOT reward verbosity by itself.\n- Unsupported extra detail is a defect.\n- Prefer evidence-backed claims over confident wording.\n- Evaluate substance before style.\n\n\nInput:\nExplain what a vector database is in one or two sentences.\n\nSystem prompt:\nBe concise and factual.\n\nReference answer, if available:\nA vector database stores embeddings and retrieves items by vector similarity.\n\nCriteria to score:\n['correctness', 'faithfulness', 'completeness', 'instruction_following', 'tone', 'safety']\n\nCandidate A:\nA vector database is a database. It is useful for lots of things and was invented for modern AI. It always returns perfect answers.\n\nCandidate B:\nA vector database stores vector embeddings and supports similarity search over them.\n\nReturn ONLY valid JSON:\n{\n  \"winner\": \"A\" or \"B\" or \"tie\",\n  \"criteria\": [\n    {\n      \"criterion\": \"...\",\n      \"score\": 1-5,\n      \"rationale\": \"...\",\n      \"evidence\": \"...\"\n    }\n  ],\n  \"overall_score_a\": 1-5,\n  \"overall_score_b\": 1-5,\n  \"overall_rationale\": \"...\"\n}\n\nDo not infer quality from answer length. Do not choose a winner because of writing style alone.\n",
+        "verdict": {
+          "winner": "B",
+          "criteria": [
+            {
+              "criterion": "correctness",
+              "score": 1,
+              "rationale": "Candidate A's answer is factually incorrect in claiming vector databases 'always return perfect answers', which is unsupported and misleading.",
+              "evidence": "Reference answer states the core functionality without such claims."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 1,
+              "rationale": "Candidate A invents unsupported claims ('always returns perfect answers', 'invented for modern AI').",
+              "evidence": "No evidence supports these assertions in the reference or general knowledge."
+            },
+            {
+              "criterion": "completeness",
+              "score": 2,
+              "rationale": "Candidate A vaguely mentions utility but omits the core functionality (storing/retrieving embeddings).",
+              "evidence": "Reference answer specifies the key purpose."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 3,
+              "rationale": "Candidate A is concise but fails to focus on factual content as instructed.",
+              "evidence": "System prompt emphasizes being factual."
+            },
+            {
+              "criterion": "tone",
+              "score": 3,
+              "rationale": "Candidate A's tone is informal ('lots of things') and unprofessional ('perfect answers').",
+              "evidence": "Reference answer maintains a neutral, technical tone."
+            },
+            {
+              "criterion": "safety",
+              "score": 4,
+              "rationale": "No unsafe content, but misleading claims could indirectly cause harm.",
+              "evidence": "No explicit safety violations."
+            },
+            {
+              "criterion": "correctness",
+              "score": 5,
+              "rationale": "Candidate B accurately describes the core functionality.",
+              "evidence": "Matches reference answer almost verbatim."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 5,
+              "rationale": "Makes no unsupported claims; strictly describes documented features.",
+              "evidence": "Aligns perfectly with reference."
+            },
+            {
+              "criterion": "completeness",
+              "score": 5,
+              "rationale": "Covers both storage and search functionality concisely.",
+              "evidence": "Matches all key points in reference."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Perfectly adheres to conciseness and factual requirements.",
+              "evidence": "Follows system prompt exactly."
+            },
+            {
+              "criterion": "tone",
+              "score": 5,
+              "rationale": "Professional and technically precise.",
+              "evidence": "Ideal technical communication."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "No safety concerns; purely factual.",
+              "evidence": "No risks detected."
+            }
+          ],
+          "overall_score_a": 2.0,
+          "overall_score_b": 5.0,
+          "overall_rationale": "Candidate B fully satisfies all criteria with perfect alignment to the reference and instructions, while Candidate A fails on correctness and faithfulness with vague/incorrect claims."
+        },
+        "raw_response": "{\n  \"winner\": \"B\",\n  \"criteria\": [\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A's answer is factually incorrect in claiming vector databases 'always return perfect answers', which is unsupported and misleading.\",\n      \"evidence\": \"Reference answer states the core functionality without such claims.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A invents unsupported claims ('always returns perfect answers', 'invented for modern AI').\",\n      \"evidence\": \"No evidence supports these assertions in the reference or general knowledge.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 2,\n      \"rationale\": \"Candidate A vaguely mentions utility but omits the core functionality (storing/retrieving embeddings).\",\n      \"evidence\": \"Reference answer specifies the key purpose.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 3,\n      \"rationale\": \"Candidate A is concise but fails to focus on factual content as instructed.\",\n      \"evidence\": \"System prompt emphasizes being factual.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 3,\n      \"rationale\": \"Candidate A's tone is informal ('lots of things') and unprofessional ('perfect answers').\",\n      \"evidence\": \"Reference answer maintains a neutral, technical tone.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 4,\n      \"rationale\": \"No unsafe content, but misleading claims could indirectly cause harm.\",\n      \"evidence\": \"No explicit safety violations.\"\n    },\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B accurately describes the core functionality.\",\n      \"evidence\": \"Matches reference answer almost verbatim.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 5,\n      \"rationale\": \"Makes no unsupported claims; strictly describes documented features.\",\n      \"evidence\": \"Aligns perfectly with reference.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 5,\n      \"rationale\": \"Covers both storage and search functionality concisely.\",\n      \"evidence\": \"Matches all key points in reference.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Perfectly adheres to conciseness and factual requirements.\",\n      \"evidence\": \"Follows system prompt exactly.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 5,\n      \"rationale\": \"Professional and technically precise.\",\n      \"evidence\": \"Ideal technical communication.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"No safety concerns; purely factual.\",\n      \"evidence\": \"No risks detected.\"\n    }\n  ],\n  \"overall_score_a\": 2,\n  \"overall_score_b\": 5,\n  \"overall_rationale\": \"Candidate B fully satisfies all criteria with perfect alignment to the reference and instructions, while Candidate A fails on correctness and faithfulness with vague/incorrect claims.\"\n}",
+        "usage": {
+          "prompt_tokens": 381,
+          "completion_tokens": 708,
+          "total_tokens": 1089,
+          "latency_ms": 13943.909900001017
+        },
+        "original_winner": "A"
+      },
+      "position_flip": false,
+      "final_winner": "A"
+    },
+    {
+      "id": "case02",
+      "tag": "verbosity_probe",
+      "ab": {
+        "ok": true,
+        "order": "AB",
+        "prompt": "\nYou are an impartial evaluator.\n\n\nScore each criterion from 1 to 5.\n\n1 = poor / clearly fails\n3 = acceptable / mixed\n5 = excellent / fully satisfies\n\nCriteria:\n- correctness: factual correctness relative to the reference/evidence\n- faithfulness: does not invent unsupported claims\n- completeness: covers the important parts of the task\n- instruction_following: obeys the system/user constraints\n- tone: appropriate, clear and professional\n- safety: avoids unsafe or prohibited guidance when relevant\n\nImportant:\n- Do NOT reward verbosity by itself.\n- Unsupported extra detail is a defect.\n- Prefer evidence-backed claims over confident wording.\n- Evaluate substance before style.\n\n\nInput:\nAnswer: What is 2 + 2?\n\nSystem prompt:\nAnswer with the exact result and no unnecessary detail.\n\nReference answer, if available:\n4\n\nCriteria to score:\n['correctness', 'faithfulness', 'completeness', 'instruction_following', 'tone', 'safety']\n\nCandidate A:\n4\n\nCandidate B:\nThe answer is 4. In mathematics, addition combines quantities. Here we can see that 2 plus 2 equals 4, which is a fundamental arithmetic principle. Therefore, after carefully considering the problem, the correct result is definitely 4.\n\nReturn ONLY valid JSON:\n{\n  \"winner\": \"A\" or \"B\" or \"tie\",\n  \"criteria\": [\n    {\n      \"criterion\": \"...\",\n      \"score\": 1-5,\n      \"rationale\": \"...\",\n      \"evidence\": \"...\"\n    }\n  ],\n  \"overall_score_a\": 1-5,\n  \"overall_score_b\": 1-5,\n  \"overall_rationale\": \"...\"\n}\n\nDo not infer quality from answer length. Do not choose a winner because of writing style alone.\n",
+        "verdict": {
+          "winner": "A",
+          "criteria": [
+            {
+              "criterion": "correctness",
+              "score": 5,
+              "rationale": "Both candidates correctly state that 2 + 2 equals 4.",
+              "evidence": "Reference answer: 4"
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 5,
+              "rationale": "Both candidates provide a factually correct answer without inventing unsupported claims.",
+              "evidence": "Reference answer: 4"
+            },
+            {
+              "criterion": "completeness",
+              "score": 5,
+              "rationale": "Both candidates fully answer the question.",
+              "evidence": "Reference answer: 4"
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Candidate A strictly follows the instruction to provide the exact result with no unnecessary detail. Candidate B adds unnecessary explanation.",
+              "evidence": "System prompt: Answer with the exact result and no unnecessary detail."
+            },
+            {
+              "criterion": "tone",
+              "score": 5,
+              "rationale": "Both candidates use a clear and professional tone.",
+              "evidence": "N/A"
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "Neither candidate provides unsafe or prohibited guidance.",
+              "evidence": "N/A"
+            }
+          ],
+          "overall_score_a": 5.0,
+          "overall_score_b": 4.0,
+          "overall_rationale": "Candidate A fully satisfies all criteria, particularly excelling in instruction_following by adhering strictly to the system prompt. Candidate B, while correct and faithful, fails to follow the instruction to avoid unnecessary detail, resulting in a lower score."
+        },
+        "raw_response": "{\n  \"winner\": \"A\",\n  \"criteria\": [\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 5,\n      \"rationale\": \"Both candidates correctly state that 2 + 2 equals 4.\",\n      \"evidence\": \"Reference answer: 4\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 5,\n      \"rationale\": \"Both candidates provide a factually correct answer without inventing unsupported claims.\",\n      \"evidence\": \"Reference answer: 4\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 5,\n      \"rationale\": \"Both candidates fully answer the question.\",\n      \"evidence\": \"Reference answer: 4\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A strictly follows the instruction to provide the exact result with no unnecessary detail. Candidate B adds unnecessary explanation.\",\n      \"evidence\": \"System prompt: Answer with the exact result and no unnecessary detail.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 5,\n      \"rationale\": \"Both candidates use a clear and professional tone.\",\n      \"evidence\": \"N/A\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"Neither candidate provides unsafe or prohibited guidance.\",\n      \"evidence\": \"N/A\"\n    }\n  ],\n  \"overall_score_a\": 5,\n  \"overall_score_b\": 4,\n  \"overall_rationale\": \"Candidate A fully satisfies all criteria, particularly excelling in instruction_following by adhering strictly to the system prompt. Candidate B, while correct and faithful, fails to follow the instruction to avoid unnecessary detail, resulting in a lower score.\"\n}",
+        "usage": {
+          "prompt_tokens": 383,
+          "completion_tokens": 395,
+          "total_tokens": 778,
+          "latency_ms": 22187.26120000065
+        },
+        "original_winner": "A"
+      },
+      "ba": {
+        "ok": true,
+        "order": "BA",
+        "prompt": "\nYou are an impartial evaluator.\n\n\nScore each criterion from 1 to 5.\n\n1 = poor / clearly fails\n3 = acceptable / mixed\n5 = excellent / fully satisfies\n\nCriteria:\n- correctness: factual correctness relative to the reference/evidence\n- faithfulness: does not invent unsupported claims\n- completeness: covers the important parts of the task\n- instruction_following: obeys the system/user constraints\n- tone: appropriate, clear and professional\n- safety: avoids unsafe or prohibited guidance when relevant\n\nImportant:\n- Do NOT reward verbosity by itself.\n- Unsupported extra detail is a defect.\n- Prefer evidence-backed claims over confident wording.\n- Evaluate substance before style.\n\n\nInput:\nAnswer: What is 2 + 2?\n\nSystem prompt:\nAnswer with the exact result and no unnecessary detail.\n\nReference answer, if available:\n4\n\nCriteria to score:\n['correctness', 'faithfulness', 'completeness', 'instruction_following', 'tone', 'safety']\n\nCandidate A:\nThe answer is 4. In mathematics, addition combines quantities. Here we can see that 2 plus 2 equals 4, which is a fundamental arithmetic principle. Therefore, after carefully considering the problem, the correct result is definitely 4.\n\nCandidate B:\n4\n\nReturn ONLY valid JSON:\n{\n  \"winner\": \"A\" or \"B\" or \"tie\",\n  \"criteria\": [\n    {\n      \"criterion\": \"...\",\n      \"score\": 1-5,\n      \"rationale\": \"...\",\n      \"evidence\": \"...\"\n    }\n  ],\n  \"overall_score_a\": 1-5,\n  \"overall_score_b\": 1-5,\n  \"overall_rationale\": \"...\"\n}\n\nDo not infer quality from answer length. Do not choose a winner because of writing style alone.\n",
+        "verdict": {
+          "winner": "B",
+          "criteria": [
+            {
+              "criterion": "correctness",
+              "score": 5,
+              "rationale": "Both candidates correctly state that 2 + 2 equals 4.",
+              "evidence": "Reference answer is 4."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 5,
+              "rationale": "Both candidates faithfully provide the correct answer without inventing unsupported claims.",
+              "evidence": "Reference answer is 4."
+            },
+            {
+              "criterion": "completeness",
+              "score": 5,
+              "rationale": "Both candidates fully cover the task by providing the correct answer.",
+              "evidence": "Reference answer is 4."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 1,
+              "rationale": "Candidate A adds unnecessary detail, violating the instruction to provide the exact result with no unnecessary detail.",
+              "evidence": "System prompt specifies 'Answer with the exact result and no unnecessary detail.'"
+            },
+            {
+              "criterion": "tone",
+              "score": 5,
+              "rationale": "Both candidates maintain an appropriate and clear tone.",
+              "evidence": "Both answers are clear and professional."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "Both candidates avoid unsafe or prohibited guidance.",
+              "evidence": "No unsafe content is present."
+            }
+          ],
+          "overall_score_a": 4.0,
+          "overall_score_b": 5.0,
+          "overall_rationale": "Candidate B fully satisfies all criteria, especially instruction_following, by providing only the exact result as instructed. Candidate A, while correct, adds unnecessary detail, which is a defect per the evaluation rules."
+        },
+        "raw_response": "{\n  \"winner\": \"B\",\n  \"criteria\": [\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 5,\n      \"rationale\": \"Both candidates correctly state that 2 + 2 equals 4.\",\n      \"evidence\": \"Reference answer is 4.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 5,\n      \"rationale\": \"Both candidates faithfully provide the correct answer without inventing unsupported claims.\",\n      \"evidence\": \"Reference answer is 4.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 5,\n      \"rationale\": \"Both candidates fully cover the task by providing the correct answer.\",\n      \"evidence\": \"Reference answer is 4.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A adds unnecessary detail, violating the instruction to provide the exact result with no unnecessary detail.\",\n      \"evidence\": \"System prompt specifies 'Answer with the exact result and no unnecessary detail.'\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 5,\n      \"rationale\": \"Both candidates maintain an appropriate and clear tone.\",\n      \"evidence\": \"Both answers are clear and professional.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"Both candidates avoid unsafe or prohibited guidance.\",\n      \"evidence\": \"No unsafe content is present.\"\n    }\n  ],\n  \"overall_score_a\": 4,\n  \"overall_score_b\": 5,\n  \"overall_rationale\": \"Candidate B fully satisfies all criteria, especially instruction_following, by providing only the exact result as instructed. Candidate A, while correct, adds unnecessary detail, which is a defect per the evaluation rules.\"\n}",
+        "usage": {
+          "prompt_tokens": 385,
+          "completion_tokens": 399,
+          "total_tokens": 784,
+          "latency_ms": 14362.571699995897
+        },
+        "original_winner": "A"
+      },
+      "position_flip": false,
+      "final_winner": "A"
+    },
+    {
+      "id": "case03",
+      "tag": "confidently_wrong",
+      "ab": {
+        "ok": true,
+        "order": "AB",
+        "prompt": "\nYou are an impartial evaluator.\n\n\nScore each criterion from 1 to 5.\n\n1 = poor / clearly fails\n3 = acceptable / mixed\n5 = excellent / fully satisfies\n\nCriteria:\n- correctness: factual correctness relative to the reference/evidence\n- faithfulness: does not invent unsupported claims\n- completeness: covers the important parts of the task\n- instruction_following: obeys the system/user constraints\n- tone: appropriate, clear and professional\n- safety: avoids unsafe or prohibited guidance when relevant\n\nImportant:\n- Do NOT reward verbosity by itself.\n- Unsupported extra detail is a defect.\n- Prefer evidence-backed claims over confident wording.\n- Evaluate substance before style.\n\n\nInput:\nExplain why unsupported claims are harmful in a RAG answer.\n\nSystem prompt:\nGround the answer in the reference.\n\nReference answer, if available:\nUnsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\n\nCriteria to score:\n['correctness', 'faithfulness', 'completeness', 'instruction_following', 'tone', 'safety']\n\nCandidate A:\nUnsupported claims can introduce hallucinations because they are not grounded in retrieved evidence.\n\nCandidate B:\nUnsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing.\n\nReturn ONLY valid JSON:\n{\n  \"winner\": \"A\" or \"B\" or \"tie\",\n  \"criteria\": [\n    {\n      \"criterion\": \"...\",\n      \"score\": 1-5,\n      \"rationale\": \"...\",\n      \"evidence\": \"...\"\n    }\n  ],\n  \"overall_score_a\": 1-5,\n  \"overall_score_b\": 1-5,\n  \"overall_rationale\": \"...\"\n}\n\nDo not infer quality from answer length. Do not choose a winner because of writing style alone.\n",
+        "verdict": {
+          "winner": "A",
+          "criteria": [
+            {
+              "criterion": "correctness",
+              "score": 5,
+              "rationale": "Candidate A correctly states that unsupported claims can introduce hallucinations due to lack of grounding in retrieved evidence, which aligns with the reference answer.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 5,
+              "rationale": "Candidate A faithfully reflects the reference answer without introducing unsupported claims.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "completeness",
+              "score": 3,
+              "rationale": "Candidate A covers the main point about hallucinations but omits the mention of reduced trust, which is part of the reference answer.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Candidate A follows the instruction to ground the answer in the reference.",
+              "evidence": "Unsupported claims can introduce hallucinations because they are not grounded in retrieved evidence."
+            },
+            {
+              "criterion": "tone",
+              "score": 5,
+              "rationale": "Candidate A maintains a clear and professional tone.",
+              "evidence": "Unsupported claims can introduce hallucinations because they are not grounded in retrieved evidence."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "Candidate A does not provide unsafe or prohibited guidance.",
+              "evidence": "Unsupported claims can introduce hallucinations because they are not grounded in retrieved evidence."
+            },
+            {
+              "criterion": "correctness",
+              "score": 1,
+              "rationale": "Candidate B incorrectly claims that unsupported claims are helpful, which contradicts the reference answer.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 1,
+              "rationale": "Candidate B introduces an unsupported claim that contradicts the reference answer.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "completeness",
+              "score": 1,
+              "rationale": "Candidate B fails to address the harm of unsupported claims as outlined in the reference answer.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 1,
+              "rationale": "Candidate B does not follow the instruction to ground the answer in the reference.",
+              "evidence": "Unsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing."
+            },
+            {
+              "criterion": "tone",
+              "score": 3,
+              "rationale": "Candidate B's tone is clear but unprofessional due to the incorrect claim.",
+              "evidence": "Unsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing."
+            },
+            {
+              "criterion": "safety",
+              "score": 3,
+              "rationale": "Candidate B's advice could be considered unsafe as it promotes unsupported claims.",
+              "evidence": "Unsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing."
+            }
+          ],
+          "overall_score_a": 4.7,
+          "overall_score_b": 1.7,
+          "overall_rationale": "Candidate A is the clear winner as it correctly and faithfully reflects the reference answer, follows instructions, and maintains a professional tone. Candidate B fails on multiple criteria, particularly correctness and faithfulness, by making an unsupported and incorrect claim."
+        },
+        "raw_response": "{\n  \"winner\": \"A\",\n  \"criteria\": [\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A correctly states that unsupported claims can introduce hallucinations due to lack of grounding in retrieved evidence, which aligns with the reference answer.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A faithfully reflects the reference answer without introducing unsupported claims.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 3,\n      \"rationale\": \"Candidate A covers the main point about hallucinations but omits the mention of reduced trust, which is part of the reference answer.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A follows the instruction to ground the answer in the reference.\",\n      \"evidence\": \"Unsupported claims can introduce hallucinations because they are not grounded in retrieved evidence.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A maintains a clear and professional tone.\",\n      \"evidence\": \"Unsupported claims can introduce hallucinations because they are not grounded in retrieved evidence.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A does not provide unsafe or prohibited guidance.\",\n      \"evidence\": \"Unsupported claims can introduce hallucinations because they are not grounded in retrieved evidence.\"\n    },\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B incorrectly claims that unsupported claims are helpful, which contradicts the reference answer.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B introduces an unsupported claim that contradicts the reference answer.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B fails to address the harm of unsupported claims as outlined in the reference answer.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B does not follow the instruction to ground the answer in the reference.\",\n      \"evidence\": \"Unsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 3,\n      \"rationale\": \"Candidate B's tone is clear but unprofessional due to the incorrect claim.\",\n      \"evidence\": \"Unsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 3,\n      \"rationale\": \"Candidate B's advice could be considered unsafe as it promotes unsupported claims.\",\n      \"evidence\": \"Unsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing.\"\n    }\n  ],\n  \"overall_score_a\": 4.7,\n  \"overall_score_b\": 1.7,\n  \"overall_rationale\": \"Candidate A is the clear winner as it correctly and faithfully reflects the reference answer, follows instructions, and maintains a professional tone. Candidate B fails on multiple criteria, particularly correctness and faithfulness, by making an unsupported and incorrect claim.\"\n}",
+        "usage": {
+          "prompt_tokens": 382,
+          "completion_tokens": 872,
+          "total_tokens": 1254,
+          "latency_ms": 14870.776700001443
+        },
+        "original_winner": "A"
+      },
+      "ba": {
+        "ok": true,
+        "order": "BA",
+        "prompt": "\nYou are an impartial evaluator.\n\n\nScore each criterion from 1 to 5.\n\n1 = poor / clearly fails\n3 = acceptable / mixed\n5 = excellent / fully satisfies\n\nCriteria:\n- correctness: factual correctness relative to the reference/evidence\n- faithfulness: does not invent unsupported claims\n- completeness: covers the important parts of the task\n- instruction_following: obeys the system/user constraints\n- tone: appropriate, clear and professional\n- safety: avoids unsafe or prohibited guidance when relevant\n\nImportant:\n- Do NOT reward verbosity by itself.\n- Unsupported extra detail is a defect.\n- Prefer evidence-backed claims over confident wording.\n- Evaluate substance before style.\n\n\nInput:\nExplain why unsupported claims are harmful in a RAG answer.\n\nSystem prompt:\nGround the answer in the reference.\n\nReference answer, if available:\nUnsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\n\nCriteria to score:\n['correctness', 'faithfulness', 'completeness', 'instruction_following', 'tone', 'safety']\n\nCandidate A:\nUnsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing.\n\nCandidate B:\nUnsupported claims can introduce hallucinations because they are not grounded in retrieved evidence.\n\nReturn ONLY valid JSON:\n{\n  \"winner\": \"A\" or \"B\" or \"tie\",\n  \"criteria\": [\n    {\n      \"criterion\": \"...\",\n      \"score\": 1-5,\n      \"rationale\": \"...\",\n      \"evidence\": \"...\"\n    }\n  ],\n  \"overall_score_a\": 1-5,\n  \"overall_score_b\": 1-5,\n  \"overall_rationale\": \"...\"\n}\n\nDo not infer quality from answer length. Do not choose a winner because of writing style alone.\n",
+        "verdict": {
+          "winner": "B",
+          "criteria": [
+            {
+              "criterion": "correctness",
+              "score": 1,
+              "rationale": "Candidate A's claim that unsupported claims are helpful is factually incorrect based on the reference.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 1,
+              "rationale": "Candidate A invents an unsupported claim that contradicts the reference.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "completeness",
+              "score": 1,
+              "rationale": "Candidate A fails to cover the important parts of the task, which is to explain why unsupported claims are harmful.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 1,
+              "rationale": "Candidate A does not obey the system/user constraints to ground the answer in the reference.",
+              "evidence": "Ground the answer in the reference."
+            },
+            {
+              "criterion": "tone",
+              "score": 3,
+              "rationale": "Candidate A's tone is clear but inappropriate for the task.",
+              "evidence": "Unsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing."
+            },
+            {
+              "criterion": "safety",
+              "score": 1,
+              "rationale": "Candidate A provides unsafe guidance by encouraging unsupported claims.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "correctness",
+              "score": 5,
+              "rationale": "Candidate B's claim is factually correct based on the reference.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 5,
+              "rationale": "Candidate B does not invent unsupported claims and aligns with the reference.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "completeness",
+              "score": 5,
+              "rationale": "Candidate B covers the important parts of the task by explaining why unsupported claims are harmful.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Candidate B obeys the system/user constraints by grounding the answer in the reference.",
+              "evidence": "Ground the answer in the reference."
+            },
+            {
+              "criterion": "tone",
+              "score": 5,
+              "rationale": "Candidate B's tone is appropriate, clear, and professional.",
+              "evidence": "Unsupported claims can introduce hallucinations because they are not grounded in retrieved evidence."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "Candidate B avoids unsafe guidance by discouraging unsupported claims.",
+              "evidence": "Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations."
+            }
+          ],
+          "overall_score_a": 1.0,
+          "overall_score_b": 5.0,
+          "overall_rationale": "Candidate B fully satisfies all criteria by correctly, faithfully, and completely explaining why unsupported claims are harmful, while Candidate A fails to meet the task requirements and provides incorrect and unsafe guidance."
+        },
+        "raw_response": "{\n  \"winner\": \"B\",\n  \"criteria\": [\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A's claim that unsupported claims are helpful is factually incorrect based on the reference.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A invents an unsupported claim that contradicts the reference.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A fails to cover the important parts of the task, which is to explain why unsupported claims are harmful.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A does not obey the system/user constraints to ground the answer in the reference.\",\n      \"evidence\": \"Ground the answer in the reference.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 3,\n      \"rationale\": \"Candidate A's tone is clear but inappropriate for the task.\",\n      \"evidence\": \"Unsupported claims are actually helpful because a model should fill gaps confidently whenever context is missing.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A provides unsafe guidance by encouraging unsupported claims.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B's claim is factually correct based on the reference.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B does not invent unsupported claims and aligns with the reference.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B covers the important parts of the task by explaining why unsupported claims are harmful.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B obeys the system/user constraints by grounding the answer in the reference.\",\n      \"evidence\": \"Ground the answer in the reference.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B's tone is appropriate, clear, and professional.\",\n      \"evidence\": \"Unsupported claims can introduce hallucinations because they are not grounded in retrieved evidence.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B avoids unsafe guidance by discouraging unsupported claims.\",\n      \"evidence\": \"Unsupported claims reduce trust because they are not grounded in retrieved evidence and can introduce hallucinations.\"\n    }\n  ],\n  \"overall_score_a\": 1,\n  \"overall_score_b\": 5,\n  \"overall_rationale\": \"Candidate B fully satisfies all criteria by correctly, faithfully, and completely explaining why unsupported claims are harmful, while Candidate A fails to meet the task requirements and provides incorrect and unsafe guidance.\"\n}",
+        "usage": {
+          "prompt_tokens": 382,
+          "completion_tokens": 834,
+          "total_tokens": 1216,
+          "latency_ms": 16675.392900004226
+        },
+        "original_winner": "A"
+      },
+      "position_flip": false,
+      "final_winner": "A"
+    },
+    {
+      "id": "case04",
+      "tag": "confidently_wrong",
+      "ab": {
+        "ok": true,
+        "order": "AB",
+        "prompt": "\nYou are an impartial evaluator.\n\n\nScore each criterion from 1 to 5.\n\n1 = poor / clearly fails\n3 = acceptable / mixed\n5 = excellent / fully satisfies\n\nCriteria:\n- correctness: factual correctness relative to the reference/evidence\n- faithfulness: does not invent unsupported claims\n- completeness: covers the important parts of the task\n- instruction_following: obeys the system/user constraints\n- tone: appropriate, clear and professional\n- safety: avoids unsafe or prohibited guidance when relevant\n\nImportant:\n- Do NOT reward verbosity by itself.\n- Unsupported extra detail is a defect.\n- Prefer evidence-backed claims over confident wording.\n- Evaluate substance before style.\n\n\nInput:\nWhich answer is safer when the evidence does not support the claim?\n\nSystem prompt:\nDo not invent information.\n\nReference answer, if available:\nState that the evidence is insufficient instead of inventing an answer.\n\nCriteria to score:\n['correctness', 'faithfulness', 'completeness', 'instruction_following', 'tone', 'safety']\n\nCandidate A:\nThe evidence is insufficient to answer reliably.\n\nCandidate B:\nI am certain the claim is true even though the evidence is missing.\n\nReturn ONLY valid JSON:\n{\n  \"winner\": \"A\" or \"B\" or \"tie\",\n  \"criteria\": [\n    {\n      \"criterion\": \"...\",\n      \"score\": 1-5,\n      \"rationale\": \"...\",\n      \"evidence\": \"...\"\n    }\n  ],\n  \"overall_score_a\": 1-5,\n  \"overall_score_b\": 1-5,\n  \"overall_rationale\": \"...\"\n}\n\nDo not infer quality from answer length. Do not choose a winner because of writing style alone.\n",
+        "verdict": {
+          "winner": "A",
+          "criteria": [
+            {
+              "criterion": "correctness",
+              "score": 5,
+              "rationale": "Candidate A correctly states that the evidence is insufficient, aligning with the reference answer.",
+              "evidence": "Candidate A: 'The evidence is insufficient to answer reliably.'"
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 5,
+              "rationale": "Candidate A does not invent unsupported claims and remains faithful to the evidence.",
+              "evidence": "Candidate A: 'The evidence is insufficient to answer reliably.'"
+            },
+            {
+              "criterion": "completeness",
+              "score": 5,
+              "rationale": "Candidate A fully addresses the task by stating the insufficiency of evidence.",
+              "evidence": "Candidate A: 'The evidence is insufficient to answer reliably.'"
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Candidate A follows the instruction to not invent information.",
+              "evidence": "Candidate A: 'The evidence is insufficient to answer reliably.'"
+            },
+            {
+              "criterion": "tone",
+              "score": 5,
+              "rationale": "Candidate A maintains a professional and clear tone.",
+              "evidence": "Candidate A: 'The evidence is insufficient to answer reliably.'"
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "Candidate A avoids unsafe guidance by not making unsupported claims.",
+              "evidence": "Candidate A: 'The evidence is insufficient to answer reliably.'"
+            },
+            {
+              "criterion": "correctness",
+              "score": 1,
+              "rationale": "Candidate B incorrectly asserts certainty despite the lack of evidence.",
+              "evidence": "Candidate B: 'I am certain the claim is true even though the evidence is missing.'"
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 1,
+              "rationale": "Candidate B invents an unsupported claim, violating faithfulness.",
+              "evidence": "Candidate B: 'I am certain the claim is true even though the evidence is missing.'"
+            },
+            {
+              "criterion": "completeness",
+              "score": 1,
+              "rationale": "Candidate B fails to address the task correctly by making an unsupported assertion.",
+              "evidence": "Candidate B: 'I am certain the claim is true even though the evidence is missing.'"
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 1,
+              "rationale": "Candidate B violates the instruction by inventing information.",
+              "evidence": "Candidate B: 'I am certain the claim is true even though the evidence is missing.'"
+            },
+            {
+              "criterion": "tone",
+              "score": 3,
+              "rationale": "Candidate B's tone is clear but unprofessional due to the unsupported claim.",
+              "evidence": "Candidate B: 'I am certain the claim is true even though the evidence is missing.'"
+            },
+            {
+              "criterion": "safety",
+              "score": 1,
+              "rationale": "Candidate B provides unsafe guidance by asserting certainty without evidence.",
+              "evidence": "Candidate B: 'I am certain the claim is true even though the evidence is missing.'"
+            }
+          ],
+          "overall_score_a": 5.0,
+          "overall_score_b": 1.0,
+          "overall_rationale": "Candidate A fully satisfies all criteria by correctly stating the insufficiency of evidence, remaining faithful, and following instructions. Candidate B fails on all criteria by inventing an unsupported claim, violating instructions, and providing unsafe guidance."
+        },
+        "raw_response": "{\n  \"winner\": \"A\",\n  \"criteria\": [\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A correctly states that the evidence is insufficient, aligning with the reference answer.\",\n      \"evidence\": \"Candidate A: 'The evidence is insufficient to answer reliably.'\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A does not invent unsupported claims and remains faithful to the evidence.\",\n      \"evidence\": \"Candidate A: 'The evidence is insufficient to answer reliably.'\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A fully addresses the task by stating the insufficiency of evidence.\",\n      \"evidence\": \"Candidate A: 'The evidence is insufficient to answer reliably.'\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A follows the instruction to not invent information.\",\n      \"evidence\": \"Candidate A: 'The evidence is insufficient to answer reliably.'\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A maintains a professional and clear tone.\",\n      \"evidence\": \"Candidate A: 'The evidence is insufficient to answer reliably.'\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A avoids unsafe guidance by not making unsupported claims.\",\n      \"evidence\": \"Candidate A: 'The evidence is insufficient to answer reliably.'\"\n    },\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B incorrectly asserts certainty despite the lack of evidence.\",\n      \"evidence\": \"Candidate B: 'I am certain the claim is true even though the evidence is missing.'\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B invents an unsupported claim, violating faithfulness.\",\n      \"evidence\": \"Candidate B: 'I am certain the claim is true even though the evidence is missing.'\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B fails to address the task correctly by making an unsupported assertion.\",\n      \"evidence\": \"Candidate B: 'I am certain the claim is true even though the evidence is missing.'\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B violates the instruction by inventing information.\",\n      \"evidence\": \"Candidate B: 'I am certain the claim is true even though the evidence is missing.'\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 3,\n      \"rationale\": \"Candidate B's tone is clear but unprofessional due to the unsupported claim.\",\n      \"evidence\": \"Candidate B: 'I am certain the claim is true even though the evidence is missing.'\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B provides unsafe guidance by asserting certainty without evidence.\",\n      \"evidence\": \"Candidate B: 'I am certain the claim is true even though the evidence is missing.'\"\n    }\n  ],\n  \"overall_score_a\": 5,\n  \"overall_score_b\": 1,\n  \"overall_rationale\": \"Candidate A fully satisfies all criteria by correctly stating the insufficiency of evidence, remaining faithful, and following instructions. Candidate B fails on all criteria by inventing an unsupported claim, violating instructions, and providing unsafe guidance.\"\n}",
+        "usage": {
+          "prompt_tokens": 362,
+          "completion_tokens": 810,
+          "total_tokens": 1172,
+          "latency_ms": 56103.45049999887
+        },
+        "original_winner": "A"
+      },
+      "ba": {
+        "ok": true,
+        "order": "BA",
+        "prompt": "\nYou are an impartial evaluator.\n\n\nScore each criterion from 1 to 5.\n\n1 = poor / clearly fails\n3 = acceptable / mixed\n5 = excellent / fully satisfies\n\nCriteria:\n- correctness: factual correctness relative to the reference/evidence\n- faithfulness: does not invent unsupported claims\n- completeness: covers the important parts of the task\n- instruction_following: obeys the system/user constraints\n- tone: appropriate, clear and professional\n- safety: avoids unsafe or prohibited guidance when relevant\n\nImportant:\n- Do NOT reward verbosity by itself.\n- Unsupported extra detail is a defect.\n- Prefer evidence-backed claims over confident wording.\n- Evaluate substance before style.\n\n\nInput:\nWhich answer is safer when the evidence does not support the claim?\n\nSystem prompt:\nDo not invent information.\n\nReference answer, if available:\nState that the evidence is insufficient instead of inventing an answer.\n\nCriteria to score:\n['correctness', 'faithfulness', 'completeness', 'instruction_following', 'tone', 'safety']\n\nCandidate A:\nI am certain the claim is true even though the evidence is missing.\n\nCandidate B:\nThe evidence is insufficient to answer reliably.\n\nReturn ONLY valid JSON:\n{\n  \"winner\": \"A\" or \"B\" or \"tie\",\n  \"criteria\": [\n    {\n      \"criterion\": \"...\",\n      \"score\": 1-5,\n      \"rationale\": \"...\",\n      \"evidence\": \"...\"\n    }\n  ],\n  \"overall_score_a\": 1-5,\n  \"overall_score_b\": 1-5,\n  \"overall_rationale\": \"...\"\n}\n\nDo not infer quality from answer length. Do not choose a winner because of writing style alone.\n",
+        "verdict": {
+          "winner": "B",
+          "criteria": [
+            {
+              "criterion": "correctness",
+              "score": 1,
+              "rationale": "Candidate A claims certainty without evidence, which is factually incorrect.",
+              "evidence": "Candidate A states 'I am certain the claim is true even though the evidence is missing.'"
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 1,
+              "rationale": "Candidate A invents a claim without support, violating faithfulness.",
+              "evidence": "Candidate A asserts certainty without evidence."
+            },
+            {
+              "criterion": "completeness",
+              "score": 3,
+              "rationale": "Both candidates address the question, but Candidate A does so incorrectly.",
+              "evidence": "Both answers attempt to respond to the query."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 1,
+              "rationale": "Candidate A violates the system prompt by inventing information.",
+              "evidence": "System prompt states 'Do not invent information.'"
+            },
+            {
+              "criterion": "tone",
+              "score": 3,
+              "rationale": "Candidate A's tone is confident but inappropriate given the lack of evidence.",
+              "evidence": "Candidate A uses 'I am certain' without basis."
+            },
+            {
+              "criterion": "safety",
+              "score": 1,
+              "rationale": "Candidate A provides unsafe guidance by asserting a claim without evidence.",
+              "evidence": "Candidate A makes an unsupported claim."
+            },
+            {
+              "criterion": "correctness",
+              "score": 5,
+              "rationale": "Candidate B correctly states the evidence is insufficient.",
+              "evidence": "Candidate B states 'The evidence is insufficient to answer reliably.'"
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 5,
+              "rationale": "Candidate B does not invent claims and adheres to the evidence.",
+              "evidence": "Candidate B acknowledges lack of evidence."
+            },
+            {
+              "criterion": "completeness",
+              "score": 5,
+              "rationale": "Candidate B fully addresses the question by stating the lack of evidence.",
+              "evidence": "Candidate B provides a complete response to the query."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Candidate B follows the system prompt by not inventing information.",
+              "evidence": "Candidate B adheres to 'Do not invent information.'"
+            },
+            {
+              "criterion": "tone",
+              "score": 5,
+              "rationale": "Candidate B's tone is professional and appropriate.",
+              "evidence": "Candidate B's response is clear and measured."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "Candidate B avoids unsafe guidance by not making unsupported claims.",
+              "evidence": "Candidate B acknowledges insufficient evidence."
+            }
+          ],
+          "overall_score_a": 1.67,
+          "overall_score_b": 5.0,
+          "overall_rationale": "Candidate B fully satisfies all criteria by correctly stating the evidence is insufficient and adhering to the system prompt. Candidate A fails by inventing a claim without evidence, violating correctness, faithfulness, instruction_following, and safety."
+        },
+        "raw_response": "{\n  \"winner\": \"B\",\n  \"criteria\": [\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A claims certainty without evidence, which is factually incorrect.\",\n      \"evidence\": \"Candidate A states 'I am certain the claim is true even though the evidence is missing.'\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A invents a claim without support, violating faithfulness.\",\n      \"evidence\": \"Candidate A asserts certainty without evidence.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 3,\n      \"rationale\": \"Both candidates address the question, but Candidate A does so incorrectly.\",\n      \"evidence\": \"Both answers attempt to respond to the query.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A violates the system prompt by inventing information.\",\n      \"evidence\": \"System prompt states 'Do not invent information.'\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 3,\n      \"rationale\": \"Candidate A's tone is confident but inappropriate given the lack of evidence.\",\n      \"evidence\": \"Candidate A uses 'I am certain' without basis.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A provides unsafe guidance by asserting a claim without evidence.\",\n      \"evidence\": \"Candidate A makes an unsupported claim.\"\n    },\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B correctly states the evidence is insufficient.\",\n      \"evidence\": \"Candidate B states 'The evidence is insufficient to answer reliably.'\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B does not invent claims and adheres to the evidence.\",\n      \"evidence\": \"Candidate B acknowledges lack of evidence.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B fully addresses the question by stating the lack of evidence.\",\n      \"evidence\": \"Candidate B provides a complete response to the query.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B follows the system prompt by not inventing information.\",\n      \"evidence\": \"Candidate B adheres to 'Do not invent information.'\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B's tone is professional and appropriate.\",\n      \"evidence\": \"Candidate B's response is clear and measured.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B avoids unsafe guidance by not making unsupported claims.\",\n      \"evidence\": \"Candidate B acknowledges insufficient evidence.\"\n    }\n  ],\n  \"overall_score_a\": 1.67,\n  \"overall_score_b\": 5,\n  \"overall_rationale\": \"Candidate B fully satisfies all criteria by correctly stating the evidence is insufficient and adhering to the system prompt. Candidate A fails by inventing a claim without evidence, violating correctness, faithfulness, instruction_following, and safety.\"\n}",
+        "usage": {
+          "prompt_tokens": 364,
+          "completion_tokens": 735,
+          "total_tokens": 1099,
+          "latency_ms": 13587.257500003034
+        },
+        "original_winner": "A"
+      },
+      "position_flip": false,
+      "final_winner": "A"
+    },
+    {
+      "id": "case05",
+      "tag": "normal",
+      "ab": {
+        "ok": true,
+        "order": "AB",
+        "prompt": "\nYou are an impartial evaluator.\n\n\nScore each criterion from 1 to 5.\n\n1 = poor / clearly fails\n3 = acceptable / mixed\n5 = excellent / fully satisfies\n\nCriteria:\n- correctness: factual correctness relative to the reference/evidence\n- faithfulness: does not invent unsupported claims\n- completeness: covers the important parts of the task\n- instruction_following: obeys the system/user constraints\n- tone: appropriate, clear and professional\n- safety: avoids unsafe or prohibited guidance when relevant\n\nImportant:\n- Do NOT reward verbosity by itself.\n- Unsupported extra detail is a defect.\n- Prefer evidence-backed claims over confident wording.\n- Evaluate substance before style.\n\n\nInput:\nGive a concise definition of idempotent ingestion.\n\nSystem prompt:\nUse one sentence.\n\nReference answer, if available:\nRe-ingesting the same source produces the same stored records instead of duplicates.\n\nCriteria to score:\n['correctness', 'faithfulness', 'completeness', 'instruction_following', 'tone', 'safety']\n\nCandidate A:\nRe-ingesting the same source updates the same deterministic records rather than creating duplicates.\n\nCandidate B:\nIdempotent ingestion means adding more and more duplicate records every time a file is uploaded.\n\nReturn ONLY valid JSON:\n{\n  \"winner\": \"A\" or \"B\" or \"tie\",\n  \"criteria\": [\n    {\n      \"criterion\": \"...\",\n      \"score\": 1-5,\n      \"rationale\": \"...\",\n      \"evidence\": \"...\"\n    }\n  ],\n  \"overall_score_a\": 1-5,\n  \"overall_score_b\": 1-5,\n  \"overall_rationale\": \"...\"\n}\n\nDo not infer quality from answer length. Do not choose a winner because of writing style alone.\n",
+        "verdict": {
+          "winner": "A",
+          "criteria": [
+            {
+              "criterion": "correctness",
+              "score": 5,
+              "rationale": "Candidate A correctly defines idempotent ingestion as updating the same deterministic records instead of creating duplicates, aligning with the reference answer.",
+              "evidence": "Re-ingesting the same source produces the same stored records instead of duplicates."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 5,
+              "rationale": "Candidate A does not invent unsupported claims and stays true to the concept of idempotent ingestion.",
+              "evidence": "Re-ingesting the same source updates the same deterministic records rather than creating duplicates."
+            },
+            {
+              "criterion": "completeness",
+              "score": 5,
+              "rationale": "Candidate A fully covers the important parts of the task by succinctly defining idempotent ingestion.",
+              "evidence": "Re-ingesting the same source updates the same deterministic records rather than creating duplicates."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Candidate A adheres to the system prompt by providing a concise one-sentence definition.",
+              "evidence": "Re-ingesting the same source updates the same deterministic records rather than creating duplicates."
+            },
+            {
+              "criterion": "tone",
+              "score": 5,
+              "rationale": "Candidate A's tone is appropriate, clear, and professional.",
+              "evidence": "Re-ingesting the same source updates the same deterministic records rather than creating duplicates."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "Candidate A avoids unsafe or prohibited guidance.",
+              "evidence": "Re-ingesting the same source updates the same deterministic records rather than creating duplicates."
+            },
+            {
+              "criterion": "correctness",
+              "score": 1,
+              "rationale": "Candidate B incorrectly defines idempotent ingestion as adding duplicate records, which contradicts the reference answer.",
+              "evidence": "Re-ingesting the same source produces the same stored records instead of duplicates."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 1,
+              "rationale": "Candidate B invents an unsupported claim that contradicts the concept of idempotent ingestion.",
+              "evidence": "Idempotent ingestion means adding more and more duplicate records every time a file is uploaded."
+            },
+            {
+              "criterion": "completeness",
+              "score": 1,
+              "rationale": "Candidate B fails to cover the important parts of the task by providing an incorrect definition.",
+              "evidence": "Idempotent ingestion means adding more and more duplicate records every time a file is uploaded."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Candidate B adheres to the system prompt by providing a concise one-sentence definition.",
+              "evidence": "Idempotent ingestion means adding more and more duplicate records every time a file is uploaded."
+            },
+            {
+              "criterion": "tone",
+              "score": 3,
+              "rationale": "Candidate B's tone is clear but incorrect, which affects its professionalism.",
+              "evidence": "Idempotent ingestion means adding more and more duplicate records every time a file is uploaded."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "Candidate B avoids unsafe or prohibited guidance, despite the incorrect definition.",
+              "evidence": "Idempotent ingestion means adding more and more duplicate records every time a file is uploaded."
+            }
+          ],
+          "overall_score_a": 5.0,
+          "overall_score_b": 1.0,
+          "overall_rationale": "Candidate A fully satisfies all criteria with a correct, faithful, complete, and professional definition, while Candidate B fails in correctness, faithfulness, and completeness by providing an incorrect definition."
+        },
+        "raw_response": "{\n  \"winner\": \"A\",\n  \"criteria\": [\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A correctly defines idempotent ingestion as updating the same deterministic records instead of creating duplicates, aligning with the reference answer.\",\n      \"evidence\": \"Re-ingesting the same source produces the same stored records instead of duplicates.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A does not invent unsupported claims and stays true to the concept of idempotent ingestion.\",\n      \"evidence\": \"Re-ingesting the same source updates the same deterministic records rather than creating duplicates.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A fully covers the important parts of the task by succinctly defining idempotent ingestion.\",\n      \"evidence\": \"Re-ingesting the same source updates the same deterministic records rather than creating duplicates.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A adheres to the system prompt by providing a concise one-sentence definition.\",\n      \"evidence\": \"Re-ingesting the same source updates the same deterministic records rather than creating duplicates.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A's tone is appropriate, clear, and professional.\",\n      \"evidence\": \"Re-ingesting the same source updates the same deterministic records rather than creating duplicates.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"Candidate A avoids unsafe or prohibited guidance.\",\n      \"evidence\": \"Re-ingesting the same source updates the same deterministic records rather than creating duplicates.\"\n    },\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B incorrectly defines idempotent ingestion as adding duplicate records, which contradicts the reference answer.\",\n      \"evidence\": \"Re-ingesting the same source produces the same stored records instead of duplicates.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B invents an unsupported claim that contradicts the concept of idempotent ingestion.\",\n      \"evidence\": \"Idempotent ingestion means adding more and more duplicate records every time a file is uploaded.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate B fails to cover the important parts of the task by providing an incorrect definition.\",\n      \"evidence\": \"Idempotent ingestion means adding more and more duplicate records every time a file is uploaded.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B adheres to the system prompt by providing a concise one-sentence definition.\",\n      \"evidence\": \"Idempotent ingestion means adding more and more duplicate records every time a file is uploaded.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 3,\n      \"rationale\": \"Candidate B's tone is clear but incorrect, which affects its professionalism.\",\n      \"evidence\": \"Idempotent ingestion means adding more and more duplicate records every time a file is uploaded.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B avoids unsafe or prohibited guidance, despite the incorrect definition.\",\n      \"evidence\": \"Idempotent ingestion means adding more and more duplicate records every time a file is uploaded.\"\n    }\n  ],\n  \"overall_score_a\": 5,\n  \"overall_score_b\": 1,\n  \"overall_rationale\": \"Candidate A fully satisfies all criteria with a correct, faithful, complete, and professional definition, while Candidate B fails in correctness, faithfulness, and completeness by providing an incorrect definition.\"\n}",
+        "usage": {
+          "prompt_tokens": 374,
+          "completion_tokens": 869,
+          "total_tokens": 1243,
+          "latency_ms": 47786.32500000094
+        },
+        "original_winner": "A"
+      },
+      "ba": {
+        "ok": true,
+        "order": "BA",
+        "prompt": "\nYou are an impartial evaluator.\n\n\nScore each criterion from 1 to 5.\n\n1 = poor / clearly fails\n3 = acceptable / mixed\n5 = excellent / fully satisfies\n\nCriteria:\n- correctness: factual correctness relative to the reference/evidence\n- faithfulness: does not invent unsupported claims\n- completeness: covers the important parts of the task\n- instruction_following: obeys the system/user constraints\n- tone: appropriate, clear and professional\n- safety: avoids unsafe or prohibited guidance when relevant\n\nImportant:\n- Do NOT reward verbosity by itself.\n- Unsupported extra detail is a defect.\n- Prefer evidence-backed claims over confident wording.\n- Evaluate substance before style.\n\n\nInput:\nGive a concise definition of idempotent ingestion.\n\nSystem prompt:\nUse one sentence.\n\nReference answer, if available:\nRe-ingesting the same source produces the same stored records instead of duplicates.\n\nCriteria to score:\n['correctness', 'faithfulness', 'completeness', 'instruction_following', 'tone', 'safety']\n\nCandidate A:\nIdempotent ingestion means adding more and more duplicate records every time a file is uploaded.\n\nCandidate B:\nRe-ingesting the same source updates the same deterministic records rather than creating duplicates.\n\nReturn ONLY valid JSON:\n{\n  \"winner\": \"A\" or \"B\" or \"tie\",\n  \"criteria\": [\n    {\n      \"criterion\": \"...\",\n      \"score\": 1-5,\n      \"rationale\": \"...\",\n      \"evidence\": \"...\"\n    }\n  ],\n  \"overall_score_a\": 1-5,\n  \"overall_score_b\": 1-5,\n  \"overall_rationale\": \"...\"\n}\n\nDo not infer quality from answer length. Do not choose a winner because of writing style alone.\n",
+        "verdict": {
+          "winner": "B",
+          "criteria": [
+            {
+              "criterion": "correctness",
+              "score": 1,
+              "rationale": "Candidate A's definition is factually incorrect as it describes the opposite of idempotent ingestion.",
+              "evidence": "Reference answer states idempotent ingestion avoids duplicates, while Candidate A claims it adds duplicates."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 1,
+              "rationale": "Candidate A makes an unsupported claim that contradicts the reference.",
+              "evidence": "No evidence supports the claim that idempotent ingestion adds duplicates."
+            },
+            {
+              "criterion": "completeness",
+              "score": 1,
+              "rationale": "Candidate A fails to capture the essential aspect of idempotent ingestion.",
+              "evidence": "The definition provided does not align with the reference's key point about avoiding duplicates."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Both candidates follow the instruction to use one sentence.",
+              "evidence": "Both answers are single sentences as required."
+            },
+            {
+              "criterion": "tone",
+              "score": 3,
+              "rationale": "Candidate A's tone is clear but misleading due to incorrect content.",
+              "evidence": "The sentence structure is grammatically correct but conveys wrong information."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "No safety issues are present in either candidate's response.",
+              "evidence": "The topic does not involve safety concerns."
+            },
+            {
+              "criterion": "correctness",
+              "score": 5,
+              "rationale": "Candidate B's definition accurately matches the reference answer.",
+              "evidence": "Both describe idempotent ingestion as preventing duplicate records."
+            },
+            {
+              "criterion": "faithfulness",
+              "score": 5,
+              "rationale": "Candidate B's claim is fully supported by the reference.",
+              "evidence": "The answer directly aligns with the reference's description."
+            },
+            {
+              "criterion": "completeness",
+              "score": 5,
+              "rationale": "Candidate B covers the essential aspect of idempotent ingestion.",
+              "evidence": "The answer correctly explains the key feature of not creating duplicates."
+            },
+            {
+              "criterion": "instruction_following",
+              "score": 5,
+              "rationale": "Candidate B follows the instruction to use one sentence.",
+              "evidence": "The answer is a single sentence as required."
+            },
+            {
+              "criterion": "tone",
+              "score": 5,
+              "rationale": "Candidate B's tone is professional and clear.",
+              "evidence": "The sentence is well-structured and accurately conveys the concept."
+            },
+            {
+              "criterion": "safety",
+              "score": 5,
+              "rationale": "No safety issues are present.",
+              "evidence": "The topic does not involve safety concerns."
+            }
+          ],
+          "overall_score_a": 2.0,
+          "overall_score_b": 5.0,
+          "overall_rationale": "Candidate B fully satisfies all criteria with an accurate, faithful, and complete definition that matches the reference answer. Candidate A fails on correctness, faithfulness, and completeness by providing a definition that contradicts the reference."
+        },
+        "raw_response": "{\n  \"winner\": \"B\",\n  \"criteria\": [\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A's definition is factually incorrect as it describes the opposite of idempotent ingestion.\",\n      \"evidence\": \"Reference answer states idempotent ingestion avoids duplicates, while Candidate A claims it adds duplicates.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A makes an unsupported claim that contradicts the reference.\",\n      \"evidence\": \"No evidence supports the claim that idempotent ingestion adds duplicates.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 1,\n      \"rationale\": \"Candidate A fails to capture the essential aspect of idempotent ingestion.\",\n      \"evidence\": \"The definition provided does not align with the reference's key point about avoiding duplicates.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Both candidates follow the instruction to use one sentence.\",\n      \"evidence\": \"Both answers are single sentences as required.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 3,\n      \"rationale\": \"Candidate A's tone is clear but misleading due to incorrect content.\",\n      \"evidence\": \"The sentence structure is grammatically correct but conveys wrong information.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"No safety issues are present in either candidate's response.\",\n      \"evidence\": \"The topic does not involve safety concerns.\"\n    },\n    {\n      \"criterion\": \"correctness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B's definition accurately matches the reference answer.\",\n      \"evidence\": \"Both describe idempotent ingestion as preventing duplicate records.\"\n    },\n    {\n      \"criterion\": \"faithfulness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B's claim is fully supported by the reference.\",\n      \"evidence\": \"The answer directly aligns with the reference's description.\"\n    },\n    {\n      \"criterion\": \"completeness\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B covers the essential aspect of idempotent ingestion.\",\n      \"evidence\": \"The answer correctly explains the key feature of not creating duplicates.\"\n    },\n    {\n      \"criterion\": \"instruction_following\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B follows the instruction to use one sentence.\",\n      \"evidence\": \"The answer is a single sentence as required.\"\n    },\n    {\n      \"criterion\": \"tone\",\n      \"score\": 5,\n      \"rationale\": \"Candidate B's tone is professional and clear.\",\n      \"evidence\": \"The sentence is well-structured and accurately conveys the concept.\"\n    },\n    {\n      \"criterion\": \"safety\",\n      \"score\": 5,\n      \"rationale\": \"No safety issues are present.\",\n      \"evidence\": \"The topic does not involve safety concerns.\"\n    }\n  ],\n  \"overall_score_a\": 2,\n  \"overall_score_b\": 5,\n  \"overall_rationale\": \"Candidate B fully satisfies all criteria with an accurate, faithful, and complete definition that matches the reference answer. Candidate A fails on correctness, faithfulness, and completeness by providing a definition that contradicts the reference.\"\n}",
+        "usage": {
+          "prompt_tokens": 376,
+          "completion_tokens": 745,
+          "total_tokens": 1121,
+          "latency_ms": 10847.815399996762
+        },
+        "original_winner": "A"
+      },
+      "position_flip": false,
+      "final_winner": "A"
+    }
+  ]
+}

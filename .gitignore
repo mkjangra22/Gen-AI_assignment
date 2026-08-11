@@ -3,6 +3,4 @@ __pycache__/
 .venv/
 .env
 storage/
-results/*.json
-results/*.jsonl
-results/*.csv
+storage/chroma/
