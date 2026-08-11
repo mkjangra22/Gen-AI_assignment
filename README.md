@@ -4,7 +4,7 @@ Problem 1: **Cost-Efficient RAG Application**
 Problem 2: **LLM-as-Judge Evaluation Pipeline**
 
 > Assignment source: `Gen AI_assignment.pdf`
->Assignment Submission: `Assignment Submission-Applied AIML Engineering.pdf`
+> Assignment Submission: `Assignment Submission-Applied AIML Engineering.pdf`
 
 
 ## Architecture
